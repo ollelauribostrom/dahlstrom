@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 100px 0;
+}
+
+.header__title {
+  margin: 0;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.header__title__link {
+  color: #000;
+  text-decoration: none;
+}

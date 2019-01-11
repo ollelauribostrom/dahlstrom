@@ -1,0 +1,40 @@
+{
+  "work": [
+    {
+      "title": "Knitting project 1",
+      "description": "Project description",
+      "images": ["test.png", "gatsby-astronaut.png"],
+      "category": "knitting"
+    },
+    {
+      "title": "Knitting project 2",
+      "description": "Project description",
+      "images": ["gatsby-astronaut.png"],
+      "category": "knitting"
+    },
+    {
+      "title": "Knitting project 3",
+      "description": "Project description",
+      "images": ["knittingtest.png"],
+      "category": "knitting"
+    },
+    {
+      "title": "Stuff1",
+      "description": "Project description",
+      "images": ["knittingtest.png"],
+      "category": "stuff"
+    },
+    {
+      "title": "Stuff2",
+      "description": "Project description",
+      "images": ["knittingtest.png"],
+      "category": "stuff"
+    },
+    {
+      "title": "Photography",
+      "description": "Project description",
+      "images": ["knittingtest.png"],
+      "category": "photography"
+    }
+  ]
+}
