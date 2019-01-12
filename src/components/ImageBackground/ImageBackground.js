@@ -6,21 +6,24 @@ const ImageBackground = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "test.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 1800) {
-              ...GatsbyImageSharpFluid
+        datoCmsBackground {
+          src {
+            url
+            fluid(maxWidth: 1800, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsSizes
             }
           }
         }
       }
     `}
-    render={data => (
-      <Img
-        fluid={data.placeholderImage.childImageSharp.fluid}
-        className="imagebackground"
-      />
-    )}
+    render={data => {
+      return (
+        <Img
+          fluid={data.datoCmsBackground.src.fluid}
+          className="imagebackground"
+        />
+      );
+    }}
   />
 );
 

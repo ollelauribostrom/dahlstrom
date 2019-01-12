@@ -1,3 +1,5 @@
+require ('dotenv').config ();
+
 module.exports = {
   siteMetadata: {
     title: `Felix Dahlström Persson`,
@@ -35,6 +37,12 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `./src/data/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.DATO_API_TOKEN,
       },
     },
   ],
