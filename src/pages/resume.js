@@ -14,7 +14,8 @@ const ResumeSection = props => (
 );
 
 const LinkItem = ({description, href}) => {
-  if (href && href !== '') {
+  console.log (href);
+  if (href) {
     return (
       <a
         href={href}
@@ -30,62 +31,64 @@ const LinkItem = ({description, href}) => {
   return <span style={{display: 'block'}}>{description}</span>;
 };
 
-const Education = ({data}) => (
-  <ResumeSection title="Education">
-    {data.map (text => <span style={{display: 'block'}}>{text}</span>)}
-  </ResumeSection>
-);
+const Resume = props => {
+  return (
+    <Layout hideOverFlow={true} path={props.location.pathname}>
+      <SEO title="Resume" keywords={[`resume`, `cv`]} />
+      <ResumeSection title="Education">
+        {props.data.allDatoCmsEducation.edges.map (edge => (
+          <span style={{display: 'block'}}>{edge.node.description}</span>
+        ))}
+      </ResumeSection>
+      <ResumeSection title="Exhibitions">
+        {props.data.allDatoCmsExhibition.edges.map (edge => (
+          <LinkItem description={edge.node.description} href={edge.node.href} />
+        ))}
+      </ResumeSection>
+      <ResumeSection title="Fellowships, Grants, Commissions, Residencies">
+        {props.data.allDatoCmsGrant.edges.map (edge => (
+          <LinkItem description={edge.node.description} href={edge.node.href} />
+        ))}
+      </ResumeSection>
+    </Layout>
+  );
+};
 
-const Exhibitions = ({data}) => (
-  <ResumeSection title="Exhibitions">
-    {data.map (item => (
-      <LinkItem description={item.description} href={item.href} />
-    ))}
-  </ResumeSection>
-);
-
-const Fellowships = ({data}) => (
-  <ResumeSection title="Fellowships">
-    {data.map (item => (
-      <LinkItem description={item.description} href={item.href} />
-    ))}
-  </ResumeSection>
-);
-
-const Resume = props => (
-  <StaticQuery
-    query={graphql`
-      query IndexQuery {
-        allDataJson {
-          edges {
-            node {
-              education
-              exhibitions {
-                description
-                href
-              }
-              fellowships {
-                description
-                href
-              }
-            }
-          }
+export const query = graphql`
+  query {
+    allDatoCmsGrant(sort: {
+      fields: [year]
+      order: DESC
+    }) {
+      edges {
+        node {
+          description
+          href
         }
       }
-    `}
-    render={data => {
-      const education = data.allDataJson.edges[0].node.education;
-      const exhibitions = data.allDataJson.edges[0].node.exhibitions;
-      const fellowships = data.allDataJson.edges[0].node.fellowships;
-      return (
-        <Layout hideOverFlow={true} path={props.location.pathname}>
-          <SEO title="Resume" keywords={[`resume`, `cv`]} />
-          <Education data={education} />
-          <Exhibitions data={exhibitions} />
-          <Fellowships data={fellowships} />
-        </Layout>
-      );
-    }}
-  />
-);
+    }
+    allDatoCmsExhibition(sort: {
+      fields: [year]
+      order: DESC
+    }) {
+      edges {
+        node {
+          description
+          href
+        }
+      }
+    }
+    allDatoCmsEducation(sort: {
+      fields: [year]
+      order: DESC
+    }) {
+      edges {
+        node {
+          description
+        }
+      }
+    }
+  }
+`;
+
 export default Resume;
