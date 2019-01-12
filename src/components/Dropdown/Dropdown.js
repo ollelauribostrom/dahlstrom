@@ -1,13 +1,22 @@
-import {Link} from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
+import {Link} from 'gatsby';
 
-const DropDown = ({categories, onBlur}) => (
+const Dropdown = ({categories, onBlur, color, background}) => (
   <div className="dropdown" onBlur={onBlur}>
-    <div className="dropdown__arrow" />
-    <div className="dropdown__body">
+    <div
+      className="dropdown__arrow"
+      style={{
+        borderColor: `transparent transparent ${background.hex} transparent`,
+      }}
+    />
+    <div className="dropdown__body" style={{background: background.hex}}>
       {categories.map (category => (
-        <Link to={category.href} className="dropdown__item">
+        <Link
+          to={category.href}
+          className="dropdown__item"
+          style={{color: color.hex}}
+        >
           {category.title}
         </Link>
       ))}
@@ -15,6 +24,7 @@ const DropDown = ({categories, onBlur}) => (
   </div>
 );
 
-DropDown.PropTypes = {};
+Dropdown.propTypes = {};
+Dropdown.defaultProps = {};
 
-export default DropDown;
+export default Dropdown;

@@ -5,16 +5,27 @@ import {Link} from 'gatsby';
 import Menu from '../Menu';
 import Sidebar from '../Sidebar';
 
-const Header = ({siteTitle, path}) => (
+const Header = ({
+  siteTitle,
+  path,
+  color = '#000',
+  menuBackground,
+  menuColor,
+}) => (
   <div className="header">
     <div>
       <h1 className="header__title">
-        <Link to="/" className="header__title__link">
+        <Link to="/" className="header__title__link" style={{color: color.hex}}>
           {siteTitle}
         </Link>
       </h1>
     </div>
-    <Menu path={path} />
+    <Menu
+      path={path}
+      color={color}
+      menuBackground={menuBackground}
+      menuColor={menuColor}
+    />
   </div>
 );
 

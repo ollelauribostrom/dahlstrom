@@ -5,7 +5,14 @@ import {StaticQuery, graphql} from 'gatsby';
 import Header from '../Header';
 import Sidebar from '../Sidebar';
 
-const Layout = ({children, hideOverFlow, path}) => (
+const Layout = ({
+  children,
+  hideOverFlow,
+  path,
+  color,
+  menuBackground,
+  menuColor,
+}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -25,7 +32,13 @@ const Layout = ({children, hideOverFlow, path}) => (
           overflowX: 'hidden',
         }}
       >
-        <Header siteTitle={data.site.siteMetadata.title} path={path} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          path={path}
+          color={color}
+          menuBackground={menuBackground}
+          menuColor={menuColor}
+        />
         <div
           style={{
             margin: `0 auto`,
@@ -43,6 +56,12 @@ const Layout = ({children, hideOverFlow, path}) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+};
+
+Layout.defaultProps = {
+  color: {hex: '#000'},
+  menuColor: {hex: '#fff'},
+  menuBackground: {hex: '#000'},
 };
 
 export default Layout;
