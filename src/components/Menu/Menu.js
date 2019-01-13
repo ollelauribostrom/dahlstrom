@@ -1,4 +1,4 @@
-import {Link, StaticQuery} from 'gatsby';
+import {Link, StaticQuery, graphql} from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -19,22 +19,13 @@ const MenuItem = props => (
   </span>
 );
 
-function isWorkPage (path) {
-  return (
-    path === '/knitting/' || path === '/stuff/' || path === '/photography/'
-  );
-}
-
-function isAboutPage (path) {
-  return path === '/resume/' || path === '/contact/';
-}
-
 class Menu extends React.Component {
   constructor (props) {
     super (props);
     this.state = {showDropDown: false};
   }
   render () {
+    console.log (this.props.path);
     return (
       <StaticQuery
         query={graphql`
@@ -49,7 +40,6 @@ class Menu extends React.Component {
           }
         `}
         render={data => {
-          console.log (data);
           return (
             <div
               style={{
@@ -62,7 +52,7 @@ class Menu extends React.Component {
                 onMouseLeave={() => this.setState ({showWorkDropDown: false})}
               >
                 <MenuItem
-                  isActive={isWorkPage (this.props.path)}
+                  isActive={false}
                   onMouseOver={() => this.setState ({showWorkDropDown: true})}
                   onFocus={() => this.setState ({showWorkDropDown: true})}
                   color={this.props.color}
@@ -81,27 +71,39 @@ class Menu extends React.Component {
                     />
                   : null}
               </div>
-              <div
-                style={{position: 'relative', marginLeft: '20px'}}
-                onMouseLeave={() => this.setState ({showAboutDropDown: false})}
-              >
+              <div style={{position: 'relative', marginLeft: '20px'}}>
                 <MenuItem
-                  isActive={isAboutPage (this.props.path)}
+                  isActive={this.props.path === '/resume'}
                   onMouseOver={() => this.setState ({showAboutDropDown: true})}
                   color={this.props.color}
                 >
-                  About
+                  <Link
+                    to="/resume"
+                    style={{
+                      color: this.props.color.hex,
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Resume
+                  </Link>
                 </MenuItem>
-                {this.state.showAboutDropDown
-                  ? <DropDown
-                      categories={[
-                        {title: 'Resume', href: '/resume/'},
-                        {title: 'Contact', href: '/contact/'},
-                      ]}
-                      color={this.props.menuColor}
-                      background={this.props.menuBackground}
-                    />
-                  : null}
+              </div>
+              <div style={{position: 'relative', marginLeft: '20px'}}>
+                <MenuItem
+                  isActive={this.props.path === '/contact'}
+                  onMouseOver={() => this.setState ({showAboutDropDown: true})}
+                  color={this.props.color}
+                >
+                  <Link
+                    to="/contact"
+                    style={{
+                      color: this.props.color.hex,
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Contact
+                  </Link>
+                </MenuItem>
               </div>
             </div>
           );
@@ -111,6 +113,6 @@ class Menu extends React.Component {
   }
 }
 
-Menu.PropTypes = {};
+Menu.propTypes = {};
 
 export default Menu;

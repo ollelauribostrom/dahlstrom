@@ -8,64 +8,54 @@
 const path = require ('path');
 const createSlug = require ('./src/utils/createSlug');
 
-function getCategories (edges) {
-  const data = edges.map (edge => edge.node).filter (node => node.work)[0];
-  const works = data.work;
-  const categories = {};
-  works.forEach (work => {
-    if (categories[work.category]) {
-      categories[work.category].items.push (work);
-    } else {
-      categories[work.category] = {
-        items: [work],
-      };
-    }
-  });
-  return categories;
-}
-
 exports.createPages = ({graphql, actions}) => {
   const {createPage} = actions;
   return new Promise ((resolve, reject) => {
     graphql (
       `
       {
-        allDataJson {
+        allDatoCmsWork(
+          sort: { fields: [date] order: DESC}
+        ) {
           edges {
             node {
-              work {
-                title
-                description
-                images
-                category
+              slug
+              category {
+                name
               }
+            }
+          }
+        }
+        allDatoCmsCategory {
+          edges {
+            node {
+              name
+              slug
             }
           }
         }
       }
     `
-    ).then (result => {
-      const categories = getCategories (result.data.allDataJson.edges);
-      Object.keys (categories).forEach (categoryName => {
-        const category = categories[categoryName];
-        category.items.forEach (item => {
-          item.slug = createSlug (`/${categoryName}/${item.title}`);
+    ).then (({data}) => {
+      data.allDatoCmsCategory.edges.forEach (edge => {
+        const category = edge.node;
+        const categoryWork = data.allDatoCmsWork.edges.filter (
+          edge => edge.node.category.name === category.name
+        );
+        categoryWork.forEach (work =>
           createPage ({
-            path: item.slug,
+            path: work.node.slug,
             component: path.resolve (`./src/templates/project.js`),
             context: {
-              data: item,
-              images: item.images,
+              slug: work.node.slug,
             },
-          });
-        });
+          })
+        );
         createPage ({
-          path: createSlug (`/${categoryName}/`),
+          path: category.slug,
           component: path.resolve (`./src/templates/projects.js`),
           context: {
-            data: category,
-            category: categoryName,
-            images: category.items.map (item => item.images[0]),
+            slugs: categoryWork.map (edge => edge.node.slug),
           },
         });
       });

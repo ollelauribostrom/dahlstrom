@@ -20,12 +20,21 @@ const Header = ({
         </Link>
       </h1>
     </div>
-    <Menu
-      path={path}
-      color={color}
-      menuBackground={menuBackground}
-      menuColor={menuColor}
-    />
+    <div className="menu menu--desktop">
+      <Menu
+        path={path}
+        color={color}
+        menuBackground={menuBackground}
+        menuColor={menuColor}
+      />
+    </div>
+    <div className="menu menu--mobile">
+      <Sidebar
+        color={color}
+        menuBackground={menuBackground}
+        menuColor={menuColor}
+      />
+    </div>
   </div>
 );
 

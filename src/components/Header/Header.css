@@ -14,3 +14,16 @@
   color: #000;
   text-decoration: none;
 }
+
+.menu--mobile {
+  display: none;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .menu--desktop {
+    display: none;
+  }
+  .menu--mobile {
+    display: block;
+  }
+}

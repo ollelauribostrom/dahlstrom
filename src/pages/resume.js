@@ -1,5 +1,5 @@
 import React from 'react';
-import {StaticQuery, graphql} from 'gatsby';
+import {graphql} from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -22,7 +22,7 @@ const LinkItem = ({description, href}) => {
         target="_blank"
         rel="noopener noreferrer"
         title={description}
-        style={{display: 'block'}}
+        style={{display: 'block', color: '#454dc1'}}
       >
         {description}
       </a>

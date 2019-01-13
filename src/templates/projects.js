@@ -5,50 +5,78 @@ import Img from 'gatsby-image';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import createPageSEO from '../utils/createPageSEO';
+import './projects.css';
 
-export default props => {
-  const seo = createPageSEO (props.pageContext.data);
-  const images = props.data.placeholderImage;
-  return (
-    <Layout path={props.location.pathname}>
-      <SEO title={seo.title} keywords={seo.keywords} />
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        {props.pageContext.data.items.map ((item, i) => (
-          <Link to={item.slug}>
-            {images && images.edges[i]
-              ? <Img
-                  fluid={images.edges[i].node.childImageSharp.fluid}
-                  style={{
-                    width: '180px',
-                    height: '230px',
-                    margin: '20px',
-                  }}
-                />
-              : item.title}
-          </Link>
-        ))}
-      </div>
-    </Layout>
-  );
-};
+export default class Projects extends React.Component {
+  constructor (props) {
+    super (props);
+    this.state = {};
+  }
+  render () {
+    console.log (this.props);
+    const seo = createPageSEO (this.props.pageContext.data);
+    return (
+      <Layout path={this.props.location.pathname}>
+        <SEO title={seo.title} keywords={seo.keywords} />
+        <div className="projects">
+          {this.props.data.allDatoCmsWork
+            ? this.props.data.allDatoCmsWork.edges.map (edge => (
+                <Link to={edge.node.slug}>
+                  <div
+                    className="project__container"
+                    onMouseOver={() => {
+                      this.setState ({showInfoAbout: edge.node.slug});
+                    }}
+                    onMouseLeave={() => {
+                      this.setState ({showInfoAbout: null});
+                    }}
+                  >
+                    <Img
+                      fluid={edge.node.images[0].fluid}
+                      className="project__thumbnail"
+                    />
+                    {this.state.showInfoAbout === edge.node.slug
+                      ? <span className="project__title">
+                          {edge.node.title}
+                        </span>
+                      : null}
+                  </div>
+                </Link>
+              ))
+            : <Img
+                fluid={this.props.data.noContentImage.childImageSharp.fluid}
+                style={{width: '100%'}}
+              />}
+        </div>
+      </Layout>
+    );
+  }
+}
 
 export const query = graphql`
-  query($images: [String]) {
-    placeholderImage: allFile(filter: {relativePath: { in: $images }}) {
+  query($slugs: [String]) {
+    allDatoCmsWork(
+      filter: {
+        slug: { in: $slugs }
+      }
+    ) {
       edges {
         node {
-          childImageSharp {
-            fluid(maxWidth: 500) {
-              ...GatsbyImageSharpFluid
+          slug
+          title
+          images {
+            url
+            fluid(maxHeight: 330, maxWidth: 260, imgixParams: { fm: "jpg", auto: "compress" }) {
+              ...GatsbyDatoCmsSizes
             }
           }
+        }
+      }
+    }
+    noContentImage: file(relativePath: { eq: "no-content.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
