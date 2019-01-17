@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for SectionItem renders correctly 1`] = `
+<span
+  className="section-item"
+>
+  test
+</span>
+`;
+
+exports[`Tests for SectionItem renders correctly when href prop is provided 1`] = `
+<a
+  className="section-item section-item--link"
+  href="google.com"
+  rel="noopener noreferrer"
+  target="_blank"
+  title="test"
+>
+  test
+</a>
+`;
