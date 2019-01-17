@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Sidebar renders correctly 1`] = `
+<mockConstructor
+  render={[Function]}
+/>
+`;
+
+exports[`Tests for Sidebar uses defaultProps values for colors if none is provided 1`] = `
+<mockConstructor
+  render={[Function]}
+/>
+`;
