@@ -9,7 +9,7 @@ const MenuItem = props => (
       cursor: 'pointer',
       borderBottom: props.isActive ? `1px solid ${props.color.hex}` : 'none',
     }}
-    {...props}
+    onMouseOver={props.onMouseOver}
   >
     {props.children}
   </span>
@@ -19,6 +19,7 @@ MenuItem.propTypes = {
   color: PropTypes.shape({ hex: PropTypes.string }),
   isActive: PropTypes.bool,
   children: PropTypes.node.isRequired,
+  onMouseOver: PropTypes.func.isRequired,
 };
 
 MenuItem.defaultProps = {
