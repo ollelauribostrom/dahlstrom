@@ -1,20 +1,20 @@
 import React from 'react';
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
 const ResumeSection = props => (
-  <div style={{padding: '20px 0'}}>
-    <h3 style={{marginBottom: '5px', color: '#6e297a', fontSize: '16px'}}>
+  <div style={{ padding: '20px 0' }}>
+    <h3 style={{ marginBottom: '5px', color: '#6e297a', fontSize: '16px' }}>
       {props.title}
     </h3>
     {props.children}
   </div>
 );
 
-const LinkItem = ({description, href}) => {
-  console.log (href);
+const LinkItem = ({ description, href }) => {
+  console.log(href);
   if (href) {
     return (
       <a
@@ -22,13 +22,13 @@ const LinkItem = ({description, href}) => {
         target="_blank"
         rel="noopener noreferrer"
         title={description}
-        style={{display: 'block', color: '#454dc1'}}
+        style={{ display: 'block', color: '#454dc1' }}
       >
         {description}
       </a>
     );
   }
-  return <span style={{display: 'block'}}>{description}</span>;
+  return <span style={{ display: 'block' }}>{description}</span>;
 };
 
 const Resume = props => {
@@ -45,17 +45,17 @@ const Resume = props => {
         ]}
       />
       <ResumeSection title="Education">
-        {props.data.allDatoCmsEducation.edges.map (edge => (
-          <span style={{display: 'block'}}>{edge.node.description}</span>
+        {props.data.allDatoCmsEducation.edges.map(edge => (
+          <span style={{ display: 'block' }}>{edge.node.description}</span>
         ))}
       </ResumeSection>
       <ResumeSection title="Exhibitions">
-        {props.data.allDatoCmsExhibition.edges.map (edge => (
+        {props.data.allDatoCmsExhibition.edges.map(edge => (
           <LinkItem description={edge.node.description} href={edge.node.href} />
         ))}
       </ResumeSection>
       <ResumeSection title="Fellowships, Grants, Commissions, Residencies">
-        {props.data.allDatoCmsGrant.edges.map (edge => (
+        {props.data.allDatoCmsGrant.edges.map(edge => (
           <LinkItem description={edge.node.description} href={edge.node.href} />
         ))}
       </ResumeSection>
@@ -65,10 +65,7 @@ const Resume = props => {
 
 export const query = graphql`
   query {
-    allDatoCmsGrant(sort: {
-      fields: [year]
-      order: DESC
-    }) {
+    allDatoCmsGrant(sort: { fields: [year], order: DESC }) {
       edges {
         node {
           description
@@ -76,10 +73,7 @@ export const query = graphql`
         }
       }
     }
-    allDatoCmsExhibition(sort: {
-      fields: [year]
-      order: DESC
-    }) {
+    allDatoCmsExhibition(sort: { fields: [year], order: DESC }) {
       edges {
         node {
           description
@@ -87,10 +81,7 @@ export const query = graphql`
         }
       }
     }
-    allDatoCmsEducation(sort: {
-      fields: [year]
-      order: DESC
-    }) {
+    allDatoCmsEducation(sort: { fields: [year], order: DESC }) {
       edges {
         node {
           description

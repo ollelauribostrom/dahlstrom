@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link, StaticQuery, graphql} from 'gatsby';
-import {push as Menu} from 'react-burger-menu';
+import { Link, StaticQuery, graphql } from 'gatsby';
+import { push as Menu } from 'react-burger-menu';
 
-const Sidebar = ({color, menuColor, menuBackground}) => (
+const Sidebar = ({ color, menuColor, menuBackground }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -61,10 +61,8 @@ const Sidebar = ({color, menuColor, menuBackground}) => (
             marginBottom: '40px',
           }}
         >
-          <h3 style={{marginBottom: '5px', color: '#6e297a'}}>
-            Work
-          </h3>
-          {data.allDatoCmsCategory.edges.map (edge => (
+          <h3 style={{ marginBottom: '5px', color: '#6e297a' }}>Work</h3>
+          {data.allDatoCmsCategory.edges.map(edge => (
             <Link
               to={edge.node.slug}
               style={{
@@ -79,9 +77,7 @@ const Sidebar = ({color, menuColor, menuBackground}) => (
           ))}
         </div>
         <div className="sidebar__section">
-          <h3 style={{marginBottom: '5px', color: '#6e297a'}}>
-            About
-          </h3>
+          <h3 style={{ marginBottom: '5px', color: '#6e297a' }}>About</h3>
           <Link
             to="/resume"
             style={{

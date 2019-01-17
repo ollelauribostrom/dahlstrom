@@ -3,9 +3,9 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ImageBackground from '../components/ImageBackground';
-import {graphql} from 'gatsby';
+import { graphql } from 'gatsby';
 
-export default ({data}) => {
+export default ({ data }) => {
   const {
     backgroundImage,
     color,

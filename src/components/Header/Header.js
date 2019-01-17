@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'gatsby';
+import { Link } from 'gatsby';
 
 import Menu from '../Menu';
 import Sidebar from '../Sidebar';
@@ -15,7 +15,11 @@ const Header = ({
   <div className="header">
     <div>
       <h1 className="header__title">
-        <Link to="/" className="header__title__link" style={{color: color.hex}}>
+        <Link
+          to="/"
+          className="header__title__link"
+          style={{ color: color.hex }}
+        >
           {siteTitle}
         </Link>
       </h1>

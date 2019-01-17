@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StaticQuery, graphql} from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
 import Header from '../Header';
 import Sidebar from '../Sidebar';
@@ -59,9 +59,9 @@ Layout.propTypes = {
 };
 
 Layout.defaultProps = {
-  color: {hex: '#000'},
-  menuColor: {hex: '#fff'},
-  menuBackground: {hex: '#000'},
+  color: { hex: '#000' },
+  menuColor: { hex: '#fff' },
+  menuBackground: { hex: '#000' },
 };
 
 export default Layout;

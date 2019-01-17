@@ -1,4 +1,4 @@
-import {Link, StaticQuery, graphql} from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -19,12 +19,12 @@ const MenuItem = props => (
 );
 
 class Menu extends React.Component {
-  constructor (props) {
-    super (props);
-    this.state = {showDropDown: false};
+  constructor(props) {
+    super(props);
+    this.state = { showDropDown: false };
   }
-  render () {
-    console.log (this.props.path);
+  render() {
+    console.log(this.props.path);
     return (
       <StaticQuery
         query={graphql`
@@ -48,33 +48,33 @@ class Menu extends React.Component {
               }}
             >
               <div
-                style={{position: 'relative', marginLeft: '20px'}}
-                onMouseLeave={() => this.setState ({showWorkDropDown: false})}
+                style={{ position: 'relative', marginLeft: '20px' }}
+                onMouseLeave={() => this.setState({ showWorkDropDown: false })}
               >
                 <MenuItem
                   isActive={false}
-                  onMouseOver={() => this.setState ({showWorkDropDown: true})}
-                  onFocus={() => this.setState ({showWorkDropDown: true})}
+                  onMouseOver={() => this.setState({ showWorkDropDown: true })}
+                  onFocus={() => this.setState({ showWorkDropDown: true })}
                   color={this.props.color}
                 >
                   Work
                 </MenuItem>
-                {this.state.showWorkDropDown
-                  ? <DropDown
-                      categories={data.allDatoCmsCategory.edges.map (edge => ({
-                        title: edge.node.name,
-                        href: `/${edge.node.slug}/`,
-                      }))}
-                      onBlur={() => this.setState ({showWorkDropDown: false})}
-                      color={this.props.menuColor}
-                      background={this.props.menuBackground}
-                    />
-                  : null}
+                {this.state.showWorkDropDown ? (
+                  <DropDown
+                    categories={data.allDatoCmsCategory.edges.map(edge => ({
+                      title: edge.node.name,
+                      href: `/${edge.node.slug}/`,
+                    }))}
+                    onBlur={() => this.setState({ showWorkDropDown: false })}
+                    color={this.props.menuColor}
+                    background={this.props.menuBackground}
+                  />
+                ) : null}
               </div>
-              <div style={{position: 'relative', marginLeft: '20px'}}>
+              <div style={{ position: 'relative', marginLeft: '20px' }}>
                 <MenuItem
                   isActive={this.props.path === '/resume'}
-                  onMouseOver={() => this.setState ({showAboutDropDown: true})}
+                  onMouseOver={() => this.setState({ showAboutDropDown: true })}
                   color={this.props.color}
                 >
                   <Link
@@ -88,10 +88,10 @@ class Menu extends React.Component {
                   </Link>
                 </MenuItem>
               </div>
-              <div style={{position: 'relative', marginLeft: '20px'}}>
+              <div style={{ position: 'relative', marginLeft: '20px' }}>
                 <MenuItem
                   isActive={this.props.path === '/contact'}
-                  onMouseOver={() => this.setState ({showAboutDropDown: true})}
+                  onMouseOver={() => this.setState({ showAboutDropDown: true })}
                   color={this.props.color}
                 >
                   <Link
