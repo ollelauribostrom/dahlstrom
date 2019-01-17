@@ -39,7 +39,7 @@ export const query = graphql`
       }
       backgroundImage {
         url
-        fluid(maxWidth: 1800, imgixParams: { fm: "jpg", auto: "compress" }) {
+        fluid(maxWidth: 1920, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }

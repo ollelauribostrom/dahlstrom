@@ -34,7 +34,7 @@ export const query = graphql`
       description
       images {
         url
-        fluid(maxWidth: 900, imgixParams: { fm: "jpg", auto: "compress" }) {
+        fluid(maxWidth: 960, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
