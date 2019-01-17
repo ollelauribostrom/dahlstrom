@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Index page renders correctly 1`] = `
+<Layout
+  color={
+    Object {
+      "hex": "#fff",
+    }
+  }
+  menuBackground={
+    Object {
+      "hex": "#fff",
+    }
+  }
+  menuColor={
+    Object {
+      "hex": "#000",
+    }
+  }
+>
+  <SEO
+    keywords={
+      Array [
+        "Felix Dahlström Persson",
+        "Portfolio",
+      ]
+    }
+    lang="en"
+    meta={Array []}
+    title="Home"
+  />
+  <ImageBackground
+    src="img"
+  />
+</Layout>
+`;
