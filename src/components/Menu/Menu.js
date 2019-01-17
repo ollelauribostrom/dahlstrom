@@ -2,7 +2,7 @@ import { Link, StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import DropDown from '../DropDown';
+import Dropdown from '../Dropdown';
 
 const MenuItem = props => (
   <span
@@ -21,7 +21,7 @@ const MenuItem = props => (
 class Menu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showDropDown: false };
+    this.state = { showDropdown: false };
   }
   render() {
     console.log(this.props.path);
@@ -49,23 +49,23 @@ class Menu extends React.Component {
             >
               <div
                 style={{ position: 'relative', marginLeft: '20px' }}
-                onMouseLeave={() => this.setState({ showWorkDropDown: false })}
+                onMouseLeave={() => this.setState({ showWorkDropdown: false })}
               >
                 <MenuItem
                   isActive={false}
-                  onMouseOver={() => this.setState({ showWorkDropDown: true })}
-                  onFocus={() => this.setState({ showWorkDropDown: true })}
+                  onMouseOver={() => this.setState({ showWorkDropdown: true })}
+                  onFocus={() => this.setState({ showWorkDropdown: true })}
                   color={this.props.color}
                 >
                   Work
                 </MenuItem>
-                {this.state.showWorkDropDown ? (
-                  <DropDown
+                {this.state.showWorkDropdown ? (
+                  <Dropdown
                     categories={data.allDatoCmsCategory.edges.map(edge => ({
                       title: edge.node.name,
                       href: `/${edge.node.slug}/`,
                     }))}
-                    onBlur={() => this.setState({ showWorkDropDown: false })}
+                    onBlur={() => this.setState({ showWorkDropdown: false })}
                     color={this.props.menuColor}
                     background={this.props.menuBackground}
                   />
@@ -74,7 +74,7 @@ class Menu extends React.Component {
               <div style={{ position: 'relative', marginLeft: '20px' }}>
                 <MenuItem
                   isActive={this.props.path === '/resume'}
-                  onMouseOver={() => this.setState({ showAboutDropDown: true })}
+                  onMouseOver={() => this.setState({ showAboutDropdown: true })}
                   color={this.props.color}
                 >
                   <Link
@@ -91,7 +91,7 @@ class Menu extends React.Component {
               <div style={{ position: 'relative', marginLeft: '20px' }}>
                 <MenuItem
                   isActive={this.props.path === '/contact'}
-                  onMouseOver={() => this.setState({ showAboutDropDown: true })}
+                  onMouseOver={() => this.setState({ showAboutDropdown: true })}
                   color={this.props.color}
                 >
                   <Link
