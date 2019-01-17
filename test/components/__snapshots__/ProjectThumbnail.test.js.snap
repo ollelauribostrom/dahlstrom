@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for ProjectThumbnail renders correctly 1`] = `
+<mockConstructor
+  key="/test"
+  onMouseLeave={[Function]}
+  onMouseOver={[Function]}
+  to="/test"
+>
+  <div
+    className="project"
+  >
+    <Image
+      Tag="div"
+      alt=""
+      className="project__thumbnail"
+      critical={false}
+      fadeIn={true}
+      fluid={
+        Object {
+          "aspectRatio": 1.4678899082568808,
+          "sizes": "(max-width: 1800px) 100vw, 1800px",
+          "src": "someurl",
+          "srcSet": "someurl",
+        }
+      }
+    />
+  </div>
+</mockConstructor>
+`;
+
+exports[`Tests for ProjectThumbnail shows the project title when hovering the thumbnail 1`] = `
+<mockConstructor
+  key="/test"
+  onMouseLeave={[Function]}
+  onMouseOver={[Function]}
+  to="/test"
+>
+  <div
+    className="project"
+  >
+    <Image
+      Tag="div"
+      alt=""
+      className="project__thumbnail"
+      critical={false}
+      fadeIn={true}
+      fluid={
+        Object {
+          "aspectRatio": 1.4678899082568808,
+          "sizes": "(max-width: 1800px) 100vw, 1800px",
+          "src": "someurl",
+          "srcSet": "someurl",
+        }
+      }
+    />
+    <span
+      className="project__title"
+    >
+      Test
+    </span>
+  </div>
+</mockConstructor>
+`;
