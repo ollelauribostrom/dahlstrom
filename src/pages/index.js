@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ImageBackground from '../components/ImageBackground';
 
-export default ({ data }) => {
+export default ({ data, location }) => {
   const {
     backgroundImage,
     color,
@@ -13,7 +13,12 @@ export default ({ data }) => {
     menuColor,
   } = data.datoCmsFrontpage;
   return (
-    <Layout color={color} menuBackground={menuBackground} menuColor={menuColor}>
+    <Layout
+      path={location.pathname}
+      color={color}
+      menuBackground={menuBackground}
+      menuColor={menuColor}
+    >
       <SEO title="Home" keywords={['Felix Dahlström Persson', 'Portfolio']} />
       <ImageBackground src={backgroundImage} />
     </Layout>
