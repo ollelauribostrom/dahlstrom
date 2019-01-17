@@ -1,5 +1,4 @@
 const path = require ('path');
-const createSlug = require ('./src/utils/createSlug');
 
 exports.createPages = ({graphql, actions}) => {
   const {createPage} = actions;
