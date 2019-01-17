@@ -3,20 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Dropdown from '../Dropdown';
-
-const MenuItem = props => (
-  <span
-    tabIndex={0}
-    style={{
-      color: props.color.hex,
-      cursor: 'pointer',
-      borderBottom: props.isActive ? `1px solid ${props.color.hex}` : 'none',
-    }}
-    {...props}
-  >
-    {props.children}
-  </span>
-);
+import MenuItem from '../MenuItem';
 
 class Menu extends React.Component {
   constructor(props) {
@@ -24,7 +11,6 @@ class Menu extends React.Component {
     this.state = { showDropdown: false };
   }
   render() {
-    console.log(this.props.path);
     return (
       <StaticQuery
         query={graphql`
@@ -41,37 +27,31 @@ class Menu extends React.Component {
         `}
         render={data => {
           return (
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-              }}
-            >
+            <div className="menu">
               <div
-                style={{ position: 'relative', marginLeft: '20px' }}
-                onMouseLeave={() => this.setState({ showWorkDropdown: false })}
+                className="menu-item__wrapper"
+                onMouseLeave={() => this.setState({ showDropdown: false })}
               >
                 <MenuItem
                   isActive={false}
-                  onMouseOver={() => this.setState({ showWorkDropdown: true })}
-                  onFocus={() => this.setState({ showWorkDropdown: true })}
+                  onMouseOver={() => this.setState({ showDropdown: true })}
                   color={this.props.color}
                 >
                   Work
                 </MenuItem>
-                {this.state.showWorkDropdown ? (
+                {this.state.showDropdown ? (
                   <Dropdown
                     categories={data.allDatoCmsCategory.edges.map(edge => ({
                       title: edge.node.name,
                       href: `/${edge.node.slug}/`,
                     }))}
-                    onBlur={() => this.setState({ showWorkDropdown: false })}
+                    onBlur={() => this.setState({ showDropdown: false })}
                     color={this.props.menuColor}
                     background={this.props.menuBackground}
                   />
                 ) : null}
               </div>
-              <div style={{ position: 'relative', marginLeft: '20px' }}>
+              <div className="menu-item__wrapper">
                 <MenuItem
                   isActive={this.props.path === '/resume'}
                   onMouseOver={() => this.setState({ showAboutDropdown: true })}
@@ -79,16 +59,14 @@ class Menu extends React.Component {
                 >
                   <Link
                     to="/resume"
-                    style={{
-                      color: this.props.color.hex,
-                      textDecoration: 'none',
-                    }}
+                    style={{ color: this.props.color.hex }}
+                    className="menu-item__link"
                   >
                     Resume
                   </Link>
                 </MenuItem>
               </div>
-              <div style={{ position: 'relative', marginLeft: '20px' }}>
+              <div className="menu-item__wrapper">
                 <MenuItem
                   isActive={this.props.path === '/contact'}
                   onMouseOver={() => this.setState({ showAboutDropdown: true })}
@@ -96,10 +74,8 @@ class Menu extends React.Component {
                 >
                   <Link
                     to="/contact"
-                    style={{
-                      color: this.props.color.hex,
-                      textDecoration: 'none',
-                    }}
+                    style={{ color: this.props.color.hex }}
+                    className="menu-item__link"
                   >
                     Contact
                   </Link>
@@ -113,6 +89,16 @@ class Menu extends React.Component {
   }
 }
 
-Menu.propTypes = {};
+Menu.propTypes = {
+  color: PropTypes.shape({ hex: PropTypes.string }),
+  menuColor: PropTypes.shape({ hex: PropTypes.string }),
+  menuBackground: PropTypes.shape({ hex: PropTypes.string }),
+};
+
+Menu.defaultProps = {
+  color: { hex: '#fff' },
+  menuColor: { hex: '#fff' },
+  menuBackground: { hex: '#000' },
+};
 
 export default Menu;

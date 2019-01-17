@@ -30,6 +30,16 @@ exports[`Tests for Header renders correctly 1`] = `
           "hex": "fff",
         }
       }
+      menuBackground={
+        Object {
+          "hex": "#000",
+        }
+      }
+      menuColor={
+        Object {
+          "hex": "#fff",
+        }
+      }
       path="/test"
     />
   </div>
@@ -85,6 +95,16 @@ exports[`Tests for Header uses default value for color if none is provided 1`] =
       color={
         Object {
           "hex": "#000",
+        }
+      }
+      menuBackground={
+        Object {
+          "hex": "#000",
+        }
+      }
+      menuColor={
+        Object {
+          "hex": "#fff",
         }
       }
       path="/test"
