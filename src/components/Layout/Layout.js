@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Header from '../Header';
-import Sidebar from '../Sidebar';
 
 const Layout = ({ children, path, color, menuBackground, menuColor }) => (
   <StaticQuery
