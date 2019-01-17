@@ -6,7 +6,6 @@ import ImageBackground from '../components/ImageBackground';
 import {graphql} from 'gatsby';
 
 export default ({data}) => {
-  console.log (data);
   const {
     backgroundImage,
     color,

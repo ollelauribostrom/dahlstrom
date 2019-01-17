@@ -34,6 +34,7 @@ class Menu extends React.Component {
               edges {
                 node {
                   name
+                  slug
                 }
               }
             }
@@ -63,7 +64,7 @@ class Menu extends React.Component {
                   ? <DropDown
                       categories={data.allDatoCmsCategory.edges.map (edge => ({
                         title: capitalize (edge.node.name),
-                        href: `/${edge.node.name}/`,
+                        href: `/${edge.node.slug}/`,
                       }))}
                       onBlur={() => this.setState ({showWorkDropDown: false})}
                       color={this.props.menuColor}

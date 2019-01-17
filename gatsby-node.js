@@ -1,10 +1,3 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
 const path = require ('path');
 const createSlug = require ('./src/utils/createSlug');
 
@@ -22,6 +15,7 @@ exports.createPages = ({graphql, actions}) => {
               slug
               category {
                 name
+                slug
               }
             }
           }
@@ -40,12 +34,12 @@ exports.createPages = ({graphql, actions}) => {
       data.allDatoCmsCategory.edges.forEach (edge => {
         const category = edge.node;
         const categoryWork = data.allDatoCmsWork.edges.filter (
-          edge => edge.node.category.name === category.name
+          edge => edge.node.category.slug === category.slug
         );
         categoryWork.forEach (work =>
           createPage ({
             path: work.node.slug,
-            component: path.resolve (`./src/templates/project.js`),
+            component: path.resolve ('./src/templates/project.js'),
             context: {
               slug: work.node.slug,
             },
@@ -53,7 +47,7 @@ exports.createPages = ({graphql, actions}) => {
         );
         createPage ({
           path: category.slug,
-          component: path.resolve (`./src/templates/projects.js`),
+          component: path.resolve ('./src/templates/projects.js'),
           context: {
             slugs: categoryWork.map (edge => edge.node.slug),
           },
