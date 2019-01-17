@@ -5,14 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import Header from '../Header';
 import Sidebar from '../Sidebar';
 
-const Layout = ({
-  children,
-  hideOverFlow,
-  path,
-  color,
-  menuBackground,
-  menuColor,
-}) => (
+const Layout = ({ children, path, color, menuBackground, menuColor }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -24,12 +17,7 @@ const Layout = ({
       }
     `}
     render={data => (
-      <div
-        id="outer-container"
-        style={{
-          padding: '50px',
-        }}
-      >
+      <div id="outer-container">
         <Header
           siteTitle={data.site.siteMetadata.title}
           path={path}
@@ -37,16 +25,7 @@ const Layout = ({
           menuBackground={menuBackground}
           menuColor={menuColor}
         />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          {children}
-        </div>
+        <div className="content-wrapper">{children}</div>
       </div>
     )}
   />

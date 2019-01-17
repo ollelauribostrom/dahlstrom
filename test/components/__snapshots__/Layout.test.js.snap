@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Layout renders correctly 1`] = `
+<mockConstructor
+  render={[Function]}
+/>
+`;
+
+exports[`Tests for Layout uses defaultProps values for colors if none is provided 1`] = `
+<mockConstructor
+  render={[Function]}
+/>
+`;
