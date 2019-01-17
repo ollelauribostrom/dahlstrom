@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Resume page renders correctly 1`] = `
+<Layout
+  color={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuBackground={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuColor={
+    Object {
+      "hex": "#fff",
+    }
+  }
+  path="/test"
+>
+  <SEO
+    keywords={
+      Array [
+        "resume",
+        "cv",
+        "education",
+        "exhibitions",
+        "fellowships",
+        "grants",
+        "residencies",
+      ]
+    }
+    lang="en"
+    meta={Array []}
+    title="Resume"
+  />
+  <Section
+    title="Education"
+  >
+    <span
+      key="education-0"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      Education 1
+    </span>
+    <span
+      key="education-1"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      Education 2
+    </span>
+  </Section>
+  <Section
+    title="Exhibitions"
+  >
+    <SectionItem
+      description="Exhibition1"
+      key="exhibition-0"
+    />
+    <SectionItem
+      description="Exhibition2"
+      href="http://google.com"
+      key="exhibition-1"
+    />
+  </Section>
+  <Section
+    title="Fellowships, Grants, Residencies"
+  >
+    <SectionItem
+      description="Grant1"
+      key="grant-0"
+    />
+    <SectionItem
+      description="Grant2"
+      href="http://google.com"
+      key="grant-1"
+    />
+  </Section>
+</Layout>
+`;
