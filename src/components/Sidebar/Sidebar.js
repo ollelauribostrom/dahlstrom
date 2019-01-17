@@ -87,7 +87,7 @@ const Sidebar = ({ color, menuColor, menuBackground }) => (
               margin: '20px 0',
             }}
           >
-            resume
+            Resume
           </Link>
           <Link
             to="/contact"
@@ -98,7 +98,7 @@ const Sidebar = ({ color, menuColor, menuBackground }) => (
               margin: '20px 0',
             }}
           >
-            contact
+            Contact
           </Link>
         </div>
       </Menu>
