@@ -28,8 +28,6 @@ const Layout = ({
         id="outer-container"
         style={{
           padding: '50px',
-          overflow: hideOverFlow ? 'hidden' : 'auto',
-          overflowX: 'hidden',
         }}
       >
         <Header

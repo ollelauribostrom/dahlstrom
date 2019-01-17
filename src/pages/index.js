@@ -13,12 +13,7 @@ export default ({ data }) => {
     menuColor,
   } = data.datoCmsFrontpage;
   return (
-    <Layout
-      hideOverFlow={true}
-      color={color}
-      menuBackground={menuBackground}
-      menuColor={menuColor}
-    >
+    <Layout color={color} menuBackground={menuBackground} menuColor={menuColor}>
       <SEO title="Home" keywords={['Felix Dahlström Persson', 'Portfolio']} />
       <ImageBackground src={backgroundImage} />
     </Layout>

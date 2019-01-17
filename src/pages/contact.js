@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
 const Contact = props => (
-  <Layout hideOverFlow={true} path={props.location.pathname}>
+  <Layout path={props.location.pathname}>
     <SEO title="Contact" keywords={[`contact`]} />
     <div style={{}}>
       <h3 style={{ marginBottom: '5px', color: '#6e297a', fontSize: '16px' }}>
