@@ -35,6 +35,7 @@ const Sidebar = ({ color, menuColor, menuBackground }) => (
           <h3 className="sidebar__section__heading">Work</h3>
           {data.allDatoCmsCategory.edges.map(edge => (
             <Link
+              key={edge.node.slug}
               to={edge.node.slug}
               style={{ color: menuColor.hex }}
               className="sidebar__link"
