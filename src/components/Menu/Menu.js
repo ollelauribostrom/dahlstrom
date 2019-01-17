@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import DropDown from '../DropDown';
-import capitalize from '../../utils/capitalize';
 
 const MenuItem = props => (
   <span
@@ -63,7 +62,7 @@ class Menu extends React.Component {
                 {this.state.showWorkDropDown
                   ? <DropDown
                       categories={data.allDatoCmsCategory.edges.map (edge => ({
-                        title: capitalize (edge.node.name),
+                        title: edge.node.name,
                         href: `/${edge.node.slug}/`,
                       }))}
                       onBlur={() => this.setState ({showWorkDropDown: false})}
