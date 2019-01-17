@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tests for Dropdown renders correctly 1`] = `
+exports[`Tests for Header renders correctly 1`] = `
 <div
   className="header"
 >
@@ -47,7 +47,7 @@ exports[`Tests for Dropdown renders correctly 1`] = `
 </div>
 `;
 
-exports[`Tests for Dropdown uses default value for color if none is provided 1`] = `
+exports[`Tests for Header uses default value for color if none is provided 1`] = `
 <div
   className="header"
 >

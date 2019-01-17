@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for ImageBackground renders correctly 1`] = `
+<Image
+  Tag="div"
+  alt=""
+  className="imagebackground"
+  critical={false}
+  fadeIn={true}
+  fluid={
+    Object {
+      "aspectRatio": 1.4678899082568808,
+      "sizes": "(max-width: 1800px) 100vw, 1800px",
+      "src": "someurl",
+      "srcSet": "someurl",
+    }
+  }
+/>
+`;
