@@ -5,13 +5,7 @@ import { Link } from 'gatsby';
 import Menu from '../Menu';
 import Sidebar from '../Sidebar';
 
-const Header = ({
-  siteTitle,
-  path,
-  color = '#000',
-  menuBackground,
-  menuColor,
-}) => (
+const Header = ({ siteTitle, path, color, menuBackground, menuColor }) => (
   <div className="header">
     <div>
       <h1 className="header__title">
@@ -43,11 +37,15 @@ const Header = ({
 );
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
+  color: PropTypes.shape({ hex: PropTypes.string }),
+  menuBackground: PropTypes.shape({ hex: PropTypes.string }),
+  menuColor: PropTypes.shape({ hex: PropTypes.string }),
 };
 
 Header.defaultProps = {
-  siteTitle: '',
+  color: { hex: '#000' },
 };
 
 export default Header;

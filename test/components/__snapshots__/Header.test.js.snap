@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Dropdown renders correctly 1`] = `
+<div
+  className="header"
+>
+  <div>
+    <h1
+      className="header__title"
+    >
+      <mockConstructor
+        className="header__title__link"
+        style={
+          Object {
+            "color": "fff",
+          }
+        }
+        to="/"
+      >
+        test
+      </mockConstructor>
+    </h1>
+  </div>
+  <div
+    className="menu menu--desktop"
+  >
+    <Menu
+      color={
+        Object {
+          "hex": "fff",
+        }
+      }
+      path="/test"
+    />
+  </div>
+  <div
+    className="menu menu--mobile"
+  >
+    <Sidebar
+      color={
+        Object {
+          "hex": "fff",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Tests for Dropdown uses default value for color if none is provided 1`] = `
+<div
+  className="header"
+>
+  <div>
+    <h1
+      className="header__title"
+    >
+      <mockConstructor
+        className="header__title__link"
+        style={
+          Object {
+            "color": "#000",
+          }
+        }
+        to="/"
+      >
+        test
+      </mockConstructor>
+    </h1>
+  </div>
+  <div
+    className="menu menu--desktop"
+  >
+    <Menu
+      color={
+        Object {
+          "hex": "#000",
+        }
+      }
+      path="/test"
+    />
+  </div>
+  <div
+    className="menu menu--mobile"
+  >
+    <Sidebar
+      color={
+        Object {
+          "hex": "#000",
+        }
+      }
+    />
+  </div>
+</div>
+`;
