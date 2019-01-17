@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Project template renders correctly 1`] = `
+<Layout
+  color={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuBackground={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuColor={
+    Object {
+      "hex": "#fff",
+    }
+  }
+  path="/test"
+>
+  <SEO
+    keywords={
+      Array [
+        "a",
+        "b",
+      ]
+    }
+    lang="en"
+    meta={Array []}
+    title="test"
+  />
+  <h3>
+    Test project
+  </h3>
+  <p>
+    test description
+  </p>
+  <Image
+    Tag="div"
+    alt=""
+    critical={false}
+    fadeIn={true}
+    fluid={
+      Object {
+        "aspectRatio": 1.4678899082568808,
+        "sizes": "(max-width: 1800px) 100vw, 1800px",
+        "src": "someurl",
+        "srcSet": "someurl",
+      }
+    }
+    key="someurl"
+    style={
+      Object {
+        "marginBottom": "20px",
+      }
+    }
+  />
+  <Image
+    Tag="div"
+    alt=""
+    critical={false}
+    fadeIn={true}
+    fluid={
+      Object {
+        "aspectRatio": 1.4678899082568808,
+        "sizes": "(max-width: 1800px) 100vw, 1800px",
+        "src": "someurl",
+        "srcSet": "someurl",
+      }
+    }
+    key="someurl"
+    style={
+      Object {
+        "marginBottom": "20px",
+      }
+    }
+  />
+</Layout>
+`;

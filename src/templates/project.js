@@ -7,13 +7,18 @@ import SEO from '../components/SEO';
 
 export default props => {
   const { seo } = props.pageContext;
+  const { title, description, images } = props.data.datoCmsWork;
   return (
     <Layout path={props.location.pathname}>
       <SEO title={seo.title} keywords={seo.keywords} />
-      <h3>{props.data.datoCmsWork.title}</h3>
-      <p>{props.data.datoCmsWork.description}</p>
-      {props.data.datoCmsWork.images.map(image => (
-        <Img style={{ marginBottom: '20px' }} fluid={image.fluid} />
+      <h3>{title}</h3>
+      <p>{description}</p>
+      {images.map(image => (
+        <Img
+          key={image.fluid.src}
+          style={{ marginBottom: '20px' }}
+          fluid={image.fluid}
+        />
       ))}
     </Layout>
   );
