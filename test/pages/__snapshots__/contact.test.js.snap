@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Contact page renders correctly 1`] = `
+<Layout
+  color={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuBackground={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuColor={
+    Object {
+      "hex": "#fff",
+    }
+  }
+  path="/test"
+>
+  <SEO
+    keywords={
+      Array [
+        "contact",
+      ]
+    }
+    lang="en"
+    meta={Array []}
+    title="Contact"
+  />
+  <div
+    style={Object {}}
+  >
+    <h3
+      style={
+        Object {
+          "color": "#6e297a",
+          "fontSize": "16px",
+          "marginBottom": "5px",
+        }
+      }
+    >
+      Contact
+    </h3>
+    <span
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      Felix Dahlström Persson
+    </span>
+    <span
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      Thorvald Meyers Gate 71A
+    </span>
+    <span
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      0552 Oslo
+    </span>
+    <span
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      Norway
+    </span>
+    <span
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+    >
+      dahlstrom.persson@gmail.com
+    </span>
+  </div>
+</Layout>
+`;

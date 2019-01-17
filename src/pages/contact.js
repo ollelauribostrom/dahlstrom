@@ -18,4 +18,5 @@ const Contact = props => (
     </div>
   </Layout>
 );
+
 export default Contact;
