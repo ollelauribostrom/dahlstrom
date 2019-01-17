@@ -1,7 +1,15 @@
 .section-item {
   display: block;
+  margin-bottom: 5px;
 }
 
 .section-item--link {
   color: #454dc1;
+}
+
+@media only screen and (max-device-width: 500px) {
+  .section-item {
+    display: block;
+    margin-bottom: 15px;
+  }
 }

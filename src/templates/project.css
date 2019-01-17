@@ -1,0 +1,18 @@
+.project__info {
+  width: 70%;
+  margin: 0 auto 50px auto;
+}
+
+.project__description {
+  white-space: pre-line;
+}
+
+.project__image {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-device-width: 500px) {
+  .project__info {
+    width: 100%;
+  }
+}

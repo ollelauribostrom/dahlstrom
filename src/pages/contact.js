@@ -12,8 +12,7 @@ const Contact = props => (
       </h3>
       <span style={{ display: 'block' }}>Felix Dahlström Persson</span>
       <span style={{ display: 'block' }}>Thorvald Meyers Gate 71A</span>
-      <span style={{ display: 'block' }}>0552 Oslo</span>
-      <span style={{ display: 'block' }}>Norway</span>
+      <span style={{ display: 'block' }}>0552 Oslo, Norway</span>
       <span style={{ display: 'block' }}>dahlstrom.persson@gmail.com</span>
     </div>
   </Layout>

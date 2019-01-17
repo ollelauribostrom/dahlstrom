@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import './project.css';
 
 export default props => {
   const { seo } = props.pageContext;
@@ -11,12 +12,14 @@ export default props => {
   return (
     <Layout path={props.location.pathname}>
       <SEO title={seo.title} keywords={seo.keywords} />
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <div className="project__info">
+        <h3>{title}</h3>
+        <p className="project__description">{description}</p>
+      </div>
       {images.map(image => (
         <Img
           key={image.fluid.src}
-          style={{ marginBottom: '20px' }}
+          className="project__image"
           fluid={image.fluid}
         />
       ))}
