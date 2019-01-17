@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Dropdown renders correctly 1`] = `
+<div
+  className="dropdown"
+>
+  <div
+    className="dropdown__arrow"
+    style={
+      Object {
+        "borderColor": "transparent transparent #fff transparent",
+      }
+    }
+  />
+  <div
+    className="dropdown__body"
+    style={
+      Object {
+        "background": "#fff",
+      }
+    }
+  >
+    <mockConstructor
+      className="dropdown__item"
+      key="/a"
+      style={
+        Object {
+          "color": "#000",
+        }
+      }
+      to="/a"
+    >
+      a
+    </mockConstructor>
+    <mockConstructor
+      className="dropdown__item"
+      key="/b"
+      style={
+        Object {
+          "color": "#000",
+        }
+      }
+      to="/b"
+    >
+      b
+    </mockConstructor>
+  </div>
+</div>
+`;

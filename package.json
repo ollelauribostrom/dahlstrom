@@ -10,7 +10,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "jest"
   },
   "dependencies": {
     "dotenv": "^6.2.0",
@@ -31,8 +31,41 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-preset-gatsby": "^0.1.6",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "prettier": "^1.15.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/test-preprocessor.js"
+    },
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js"
+    },
+    "testPathIgnorePatterns": [
+      "node_modules",
+      ".cache"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(gatsby)/)"
+    ],
+    "globals": {
+      "__PATH_PREFIX__": ""
+    },
+    "testURL": "http://localhost",
+    "setupFiles": [
+      "<rootDir>/test-setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
