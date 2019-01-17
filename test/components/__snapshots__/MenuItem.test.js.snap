@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for MenuItem renders correctly 1`] = `
+<span
+  color={
+    Object {
+      "hex": "#fff",
+    }
+  }
+  isActive={false}
+  style={
+    Object {
+      "borderBottom": "none",
+      "color": "#fff",
+      "cursor": "pointer",
+    }
+  }
+  tabIndex={0}
+>
+  <span>
+    child
+  </span>
+</span>
+`;
+
+exports[`Tests for MenuItem renders correctly when active 1`] = `
+<span
+  color={
+    Object {
+      "hex": "#000",
+    }
+  }
+  isActive={true}
+  style={
+    Object {
+      "borderBottom": "1px solid #000",
+      "color": "#000",
+      "cursor": "pointer",
+    }
+  }
+  tabIndex={0}
+>
+  <span>
+    child
+  </span>
+</span>
+`;
