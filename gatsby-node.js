@@ -14,7 +14,6 @@ exports.createPages = ({graphql, actions}) => {
             node {
               slug
               category {
-                name
                 slug
               }
             }
@@ -23,7 +22,6 @@ exports.createPages = ({graphql, actions}) => {
         allDatoCmsCategory {
           edges {
             node {
-              name
               slug
             }
           }
