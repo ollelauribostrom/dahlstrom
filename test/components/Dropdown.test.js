@@ -14,4 +14,12 @@ describe('Tests for Dropdown', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
+  it('uses default values for color and background if none is provided', () => {
+    const wrapper = shallow(
+      <Dropdown
+        categories={[{ href: '/a', title: 'a' }, { href: '/b', title: 'b' }]}
+      />
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
 });

@@ -25,7 +25,20 @@ const Dropdown = ({ categories, color, background }) => (
   </div>
 );
 
-Dropdown.propTypes = {};
-Dropdown.defaultProps = {};
+Dropdown.propTypes = {
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      href: PropTypes.string,
+      title: PropTypes.string,
+    })
+  ).isRequired,
+  color: PropTypes.shape({ hex: PropTypes.string }),
+  background: PropTypes.shape({ hex: PropTypes.string }),
+};
+
+Dropdown.defaultProps = {
+  color: { hex: '#fff' },
+  background: { hex: '#000' },
+};
 
 export default Dropdown;

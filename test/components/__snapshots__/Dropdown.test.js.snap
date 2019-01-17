@@ -47,3 +47,51 @@ exports[`Tests for Dropdown renders correctly 1`] = `
   </div>
 </div>
 `;
+
+exports[`Tests for Dropdown uses default values for color and background if none is provided 1`] = `
+<div
+  className="dropdown"
+>
+  <div
+    className="dropdown__arrow"
+    style={
+      Object {
+        "borderColor": "transparent transparent #000 transparent",
+      }
+    }
+  />
+  <div
+    className="dropdown__body"
+    style={
+      Object {
+        "background": "#000",
+      }
+    }
+  >
+    <mockConstructor
+      className="dropdown__item"
+      key="/a"
+      style={
+        Object {
+          "color": "#fff",
+        }
+      }
+      to="/a"
+    >
+      a
+    </mockConstructor>
+    <mockConstructor
+      className="dropdown__item"
+      key="/b"
+      style={
+        Object {
+          "color": "#fff",
+        }
+      }
+      to="/b"
+    >
+      b
+    </mockConstructor>
+  </div>
+</div>
+`;
