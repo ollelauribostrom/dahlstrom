@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Projects template renders correctly 1`] = `
+<Layout
+  color={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuBackground={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuColor={
+    Object {
+      "hex": "#fff",
+    }
+  }
+  path="/test"
+>
+  <SEO
+    keywords={
+      Array [
+        "a",
+        "b",
+      ]
+    }
+    lang="en"
+    meta={Array []}
+    title="test"
+  />
+  <div
+    className="projects"
+  >
+    <ProjectThumbnail
+      key="/test"
+      project={
+        Object {
+          "images": Array [
+            Object {
+              "fluid": Object {
+                "aspectRatio": 1.4678899082568808,
+                "sizes": "(max-width: 1800px) 100vw, 1800px",
+                "src": "someurl1",
+                "srcSet": "someurl1",
+              },
+            },
+            Object {
+              "fluid": Object {
+                "aspectRatio": 1.4678899082568808,
+                "sizes": "(max-width: 1800px) 100vw, 1800px",
+                "src": "someurl2",
+                "srcSet": "someurl2",
+              },
+            },
+          ],
+          "slug": "/test",
+          "title": "Test project",
+        }
+      }
+    />
+  </div>
+</Layout>
+`;
+
+exports[`Tests for Projects template renders correctly without any projects 1`] = `
+<Layout
+  color={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuBackground={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuColor={
+    Object {
+      "hex": "#fff",
+    }
+  }
+  path="/test"
+>
+  <SEO
+    keywords={
+      Array [
+        "a",
+        "b",
+      ]
+    }
+    lang="en"
+    meta={Array []}
+    title="test"
+  />
+  <div
+    className="projects"
+  >
+    <Image
+      Tag="div"
+      alt=""
+      critical={false}
+      fadeIn={true}
+      fluid={
+        Object {
+          "aspectRatio": 1.4678899082568808,
+          "sizes": "(max-width: 1800px) 100vw, 1800px",
+          "src": "someurl2",
+          "srcSet": "someurl2",
+        }
+      }
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</Layout>
+`;

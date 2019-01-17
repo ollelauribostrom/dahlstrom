@@ -4,35 +4,8 @@
   align-items: center;
 }
 
-.project__container {
-  position: relative;
-  margin: 20px;
-}
-
-.project__thumbnail {
-  width: 260px;
-  height: 330px;
-  justify-self: center;
-}
-
-.project__title {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
-
 @media only screen and (max-device-width: 1024px) {
   .projects {
     justify-content: center;
-  }
-  .project__thumbnail {
-    width: 200px;
-    height: 250px;
-    justify-self: center;
   }
 }
