@@ -55,7 +55,7 @@ exports[`Tests for ProjectThumbnail shows the project title when hovering the th
       }
     />
     <span
-      className="project__title"
+      className="project__thumbnail__title"
     >
       Test
     </span>

@@ -33,7 +33,9 @@ exports[`Tests for Project template renders correctly 1`] = `
   <div
     className="project__info"
   >
-    <h3>
+    <h3
+      className="project__title"
+    >
       Test project
     </h3>
     <p

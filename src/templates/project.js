@@ -13,7 +13,7 @@ export default props => {
     <Layout path={props.location.pathname}>
       <SEO title={seo.title} keywords={seo.keywords} />
       <div className="project__info">
-        <h3>{title}</h3>
+        <h3 className="project__title">{title}</h3>
         <p className="project__description">{description}</p>
       </div>
       {images.map(image => (

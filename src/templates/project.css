@@ -7,6 +7,10 @@
   white-space: pre-line;
 }
 
+.project__title {
+  color: #000;
+}
+
 .project__image {
   margin-bottom: 20px;
 }

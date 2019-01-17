@@ -36,8 +36,8 @@ exports[`Tests for Contact page renders correctly 1`] = `
       style={
         Object {
           "color": "#6e297a",
-          "fontSize": "16px",
-          "marginBottom": "5px",
+          "fontSize": "18px",
+          "marginBottom": "10px",
         }
       }
     >

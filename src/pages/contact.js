@@ -7,7 +7,7 @@ const Contact = props => (
   <Layout path={props.location.pathname}>
     <SEO title="Contact" keywords={[`contact`]} />
     <div style={{}}>
-      <h3 style={{ marginBottom: '5px', color: '#6e297a', fontSize: '16px' }}>
+      <h3 style={{ marginBottom: '10px', color: '#6e297a', fontSize: '18px' }}>
         Contact
       </h3>
       <span style={{ display: 'block' }}>Felix Dahlström Persson</span>

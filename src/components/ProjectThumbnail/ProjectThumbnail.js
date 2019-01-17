@@ -20,7 +20,7 @@ class ProjectThumbnail extends React.Component {
         <div className="project">
           <Img fluid={images[0].fluid} className="project__thumbnail" />
           {this.state.showTitle ? (
-            <span className="project__title">{title}</span>
+            <span className="project__thumbnail__title">{title}</span>
           ) : null}
         </div>
       </Link>
