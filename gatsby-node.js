@@ -1,7 +1,7 @@
-const path = require('path')
+const path = require('path');
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
   return new Promise((resolve, reject) => {
     graphql(
       `
@@ -29,10 +29,10 @@ exports.createPages = ({ graphql, actions }) => {
       `
     ).then(({ data }) => {
       data.allDatoCmsCategory.edges.forEach(edge => {
-        const category = edge.node
+        const category = edge.node;
         const categoryWork = data.allDatoCmsWork.edges.filter(
           edge => edge.node.category.slug === category.slug
-        )
+        );
         categoryWork.forEach(work =>
           createPage({
             path: work.node.slug,
@@ -45,7 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
               },
             },
           })
-        )
+        );
         createPage({
           path: category.slug,
           component: path.resolve('./src/templates/projects.js'),
@@ -56,9 +56,9 @@ exports.createPages = ({ graphql, actions }) => {
               keywords: [category.name],
             },
           },
-        })
-      })
-      resolve()
-    })
-  })
-}
+        });
+      });
+      resolve();
+    });
+  });
+};
