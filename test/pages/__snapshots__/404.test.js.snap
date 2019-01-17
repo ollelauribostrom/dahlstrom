@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for 404 page renders correctly 1`] = `
+<Layout
+  color={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuBackground={
+    Object {
+      "hex": "#000",
+    }
+  }
+  menuColor={
+    Object {
+      "hex": "#fff",
+    }
+  }
+>
+  <SEO
+    keywords={Array []}
+    lang="en"
+    meta={Array []}
+    title="404: Not found"
+  />
+  <h1>
+    NOT FOUND
+  </h1>
+  <p>
+    You just hit a route that doesn't exist... the sadness.
+  </p>
+</Layout>
+`;
