@@ -34,7 +34,16 @@ const LinkItem = ({description, href}) => {
 const Resume = props => {
   return (
     <Layout hideOverFlow={true} path={props.location.pathname}>
-      <SEO title="Resume" keywords={[`resume`, `cv`]} />
+      <SEO
+        title="Resume"
+        keywords={[
+          `resume`,
+          `cv`,
+          'education',
+          'exhibitions',
+          'fellowships, grants, commissions, residencies',
+        ]}
+      />
       <ResumeSection title="Education">
         {props.data.allDatoCmsEducation.edges.map (edge => (
           <span style={{display: 'block'}}>{edge.node.description}</span>

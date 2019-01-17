@@ -11,6 +11,7 @@ exports.createPages = ({graphql, actions}) => {
         ) {
           edges {
             node {
+              title
               slug
               category {
                 slug
@@ -22,6 +23,7 @@ exports.createPages = ({graphql, actions}) => {
           edges {
             node {
               slug
+              name
             }
           }
         }
@@ -39,6 +41,10 @@ exports.createPages = ({graphql, actions}) => {
             component: path.resolve ('./src/templates/project.js'),
             context: {
               slug: work.node.slug,
+              seo: {
+                title: work.node.title,
+                keywords: ['Work', work.node.title],
+              },
             },
           })
         );
@@ -47,6 +53,10 @@ exports.createPages = ({graphql, actions}) => {
           component: path.resolve ('./src/templates/projects.js'),
           context: {
             slugs: categoryWork.map (edge => edge.node.slug),
+            seo: {
+              title: category.name,
+              keywords: [category.name],
+            },
           },
         });
       });

@@ -4,7 +4,6 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import createPageSEO from '../utils/createPageSEO';
 import './projects.css';
 
 export default class Projects extends React.Component {
@@ -13,8 +12,7 @@ export default class Projects extends React.Component {
     this.state = {};
   }
   render () {
-    console.log (this.props);
-    const seo = createPageSEO (this.props.pageContext.data);
+    const {seo} = this.props.pageContext;
     return (
       <Layout path={this.props.location.pathname}>
         <SEO title={seo.title} keywords={seo.keywords} />

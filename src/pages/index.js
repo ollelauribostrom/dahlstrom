@@ -19,7 +19,7 @@ export default ({data}) => {
       menuBackground={menuBackground}
       menuColor={menuColor}
     >
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Home" keywords={['Felix Dahlström Persson', 'Portfolio']} />
       <ImageBackground src={backgroundImage} />
     </Layout>
   );

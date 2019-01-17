@@ -4,10 +4,9 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import createPageSEO from '../utils/createPageSEO';
 
 export default props => {
-  const seo = createPageSEO (props.pageContext);
+  const {seo} = props.pageContext;
   return (
     <Layout path={props.location.pathname}>
       <SEO title={seo.title} keywords={seo.keywords} />
