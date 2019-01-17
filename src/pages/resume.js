@@ -23,9 +23,11 @@ const Resume = props => {
       />
       <Section title="Education">
         {props.data.allDatoCmsEducation.edges.map((edge, i) => (
-          <span key={`education-${i}`} style={{ display: 'block' }}>
-            {edge.node.description}
-          </span>
+          <SectionItem
+            description={edge.node.description}
+            href={edge.node.href}
+            key={`education-${i}`}
+          />
         ))}
       </Section>
       <Section title="Exhibitions">

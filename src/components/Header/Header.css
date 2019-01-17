@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 0 100px 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header__title {
@@ -11,7 +12,7 @@
 }
 
 .header__title__link {
-  color: #000;
+  color: hsla(0, 0%, 0%, 0.8);
   text-decoration: none;
 }
 

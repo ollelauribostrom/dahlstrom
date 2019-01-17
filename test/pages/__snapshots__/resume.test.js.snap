@@ -38,26 +38,14 @@ exports[`Tests for Resume page renders correctly 1`] = `
   <Section
     title="Education"
   >
-    <span
+    <SectionItem
+      description="Education 1"
       key="education-0"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-    >
-      Education 1
-    </span>
-    <span
+    />
+    <SectionItem
+      description="Education 2"
       key="education-1"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-    >
-      Education 2
-    </span>
+    />
   </Section>
   <Section
     title="Exhibitions"

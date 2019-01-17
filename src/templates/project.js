@@ -12,7 +12,7 @@ export default props => {
   return (
     <Layout path={props.location.pathname}>
       <SEO title={seo.title} keywords={seo.keywords} />
-      <div className="project__info">
+      <div>
         <h3 className="project__title">{title}</h3>
         <p className="project__description">{description}</p>
       </div>
