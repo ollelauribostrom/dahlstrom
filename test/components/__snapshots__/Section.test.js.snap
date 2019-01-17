@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Section renders correctly for a multiple children 1`] = `
+<div
+  className="section"
+>
+  <h3
+    className="section__heading"
+  >
+    test
+  </h3>
+  <span>
+    child
+  </span>
+  <span>
+    child
+  </span>
+</div>
+`;
+
+exports[`Tests for Section renders correctly for a single child 1`] = `
+<div
+  className="section"
+>
+  <h3
+    className="section__heading"
+  >
+    test
+  </h3>
+  <span>
+    child
+  </span>
+</div>
+`;
