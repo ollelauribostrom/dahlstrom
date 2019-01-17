@@ -68,16 +68,7 @@ exports[`Tests for Contact page renders correctly 1`] = `
         }
       }
     >
-      0552 Oslo
-    </span>
-    <span
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-    >
-      Norway
+      0552 Oslo, Norway
     </span>
     <span
       style={

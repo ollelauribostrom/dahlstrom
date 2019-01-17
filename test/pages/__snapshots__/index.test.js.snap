@@ -17,6 +17,7 @@ exports[`Tests for Index page renders correctly 1`] = `
       "hex": "#000",
     }
   }
+  path="/test"
 >
   <SEO
     keywords={

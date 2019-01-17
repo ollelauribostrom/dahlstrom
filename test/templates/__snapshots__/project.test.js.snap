@@ -30,15 +30,22 @@ exports[`Tests for Project template renders correctly 1`] = `
     meta={Array []}
     title="test"
   />
-  <h3>
-    Test project
-  </h3>
-  <p>
-    test description
-  </p>
+  <div
+    className="project__info"
+  >
+    <h3>
+      Test project
+    </h3>
+    <p
+      className="project__description"
+    >
+      test description
+    </p>
+  </div>
   <Image
     Tag="div"
     alt=""
+    className="project__image"
     critical={false}
     fadeIn={true}
     fluid={
@@ -50,15 +57,11 @@ exports[`Tests for Project template renders correctly 1`] = `
       }
     }
     key="someurl"
-    style={
-      Object {
-        "marginBottom": "20px",
-      }
-    }
   />
   <Image
     Tag="div"
     alt=""
+    className="project__image"
     critical={false}
     fadeIn={true}
     fluid={
@@ -70,11 +73,6 @@ exports[`Tests for Project template renders correctly 1`] = `
       }
     }
     key="someurl"
-    style={
-      Object {
-        "marginBottom": "20px",
-      }
-    }
   />
 </Layout>
 `;

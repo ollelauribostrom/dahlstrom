@@ -2,12 +2,7 @@
 
 exports[`Tests for MenuItem renders correctly 1`] = `
 <span
-  color={
-    Object {
-      "hex": "#fff",
-    }
-  }
-  isActive={false}
+  onMouseOver={[Function]}
   style={
     Object {
       "borderBottom": "none",
@@ -25,12 +20,7 @@ exports[`Tests for MenuItem renders correctly 1`] = `
 
 exports[`Tests for MenuItem renders correctly when active 1`] = `
 <span
-  color={
-    Object {
-      "hex": "#000",
-    }
-  }
-  isActive={true}
+  onMouseOver={[Function]}
   style={
     Object {
       "borderBottom": "1px solid #000",

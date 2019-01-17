@@ -6,7 +6,7 @@ import MenuItem from '../../src/components/MenuItem';
 describe('Tests for MenuItem', () => {
   it('renders correctly', () => {
     const wrapper = shallow(
-      <MenuItem color={{ hex: '#fff' }}>
+      <MenuItem color={{ hex: '#fff' }} onMouseOver={() => {}}>
         <span>child</span>
       </MenuItem>
     );
@@ -14,7 +14,7 @@ describe('Tests for MenuItem', () => {
   });
   it('renders correctly when active', () => {
     const wrapper = shallow(
-      <MenuItem isActive={true}>
+      <MenuItem isActive={true} onMouseOver={() => {}}>
         <span>child</span>
       </MenuItem>
     );

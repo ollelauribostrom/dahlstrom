@@ -14,7 +14,9 @@ const mockData = {
 
 describe('Tests for Index page', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<IndexPage data={mockData} />);
+    const wrapper = shallow(
+      <IndexPage data={mockData} location={{ pathname: '/test' }} />
+    );
     expect(wrapper).toMatchSnapshot();
   });
 });
