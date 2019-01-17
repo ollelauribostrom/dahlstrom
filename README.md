@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.org/ollelauribostrom/dahlstrom.svg?branch=master)](https://travis-ci.org/ollelauribostrom/dahlstrom)
 [![Coverage Status](https://coveralls.io/repos/github/ollelauribostrom/dahlstrom/badge.svg?branch=master)](https://coveralls.io/github/ollelauribostrom/dahlstrom?branch=master)
 
-A static portfolio site built with GatsbyJS & DatoCMS for my friend Felix Dahlström Persson. He is currently studying a BFA at the Oslo National Academy of the Arts and this site lets him display his work.
+This repo contains a static portfolio site built with GatsbyJS & DatoCMS. Its built for my friend Felix Dahlström Persson to display his work at the Oslo National Academy of the Arts.
 
-**Check out the live version at [felixdahlstrom.com](http://felixdahlstrom.com)**
+**🚀 Check out the live version at [felixdahlstrom.com](http://felixdahlstrom.com)**
 
 ## How is it built?
 
