@@ -17,3 +17,12 @@ install:
   - yarn
 script:
   - yarn test:ci
+before_deploy:
+  - yarn global add netlify-cli
+  - yarn build
+deploy:
+  provider: script
+  script: netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir ./public --prod
+  skip_cleanup: true
+  on:
+    branch: master
