@@ -9,7 +9,7 @@ class ProjectThumbnail extends React.Component {
     this.state = { showTitle: false };
   }
   render() {
-    const { slug, images, title } = this.props.project;
+    const { slug, featuredImage, title } = this.props.project;
     return (
       <Link
         to={slug}
@@ -18,7 +18,7 @@ class ProjectThumbnail extends React.Component {
         onMouseLeave={() => this.setState({ showTitle: false })}
       >
         <div className="project">
-          <Img fluid={images[0].fluid} className="project__thumbnail" />
+          <Img fluid={featuredImage.fluid} className="project__thumbnail" />
           {this.state.showTitle ? (
             <span className="project__thumbnail__title">{title}</span>
           ) : null}

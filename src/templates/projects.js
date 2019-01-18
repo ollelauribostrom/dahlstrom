@@ -35,7 +35,7 @@ export const query = graphql`
         node {
           slug
           title
-          images {
+          featuredImage {
             url
             fluid(
               maxHeight: 330
