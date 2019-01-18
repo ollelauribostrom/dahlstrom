@@ -32,7 +32,7 @@ export const query = graphql`
   query($slugs: [String]) {
     allDatoCmsWork(
       filter: { slug: { in: $slugs } }
-      sort: { fields: [slug], order: DESC }
+      sort: { fields: [updatedAt], order: DESC }
     ) {
       edges {
         node {
