@@ -12,9 +12,11 @@ export default props => {
   return (
     <Layout path={props.location.pathname}>
       <SEO title={seo.title} keywords={seo.keywords} />
-      <div>
+      <div className="project__info">
         <h3 className="project__title">{title}</h3>
-        <p className="project__description">{description}</p>
+        {description.split('\n').map(line => (
+          <p className="project__description">{line}</p>
+        ))}
       </div>
       {images.map(image => (
         <Img

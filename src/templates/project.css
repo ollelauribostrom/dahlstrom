@@ -1,14 +1,26 @@
+.project__info {
+  margin-bottom: 30px;
+}
+
 .project__description {
-  white-space: pre-line;
   font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .project__title {
   color: hsla(0, 0%, 0%, 0.8);
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 30px;
 }
 
 .project__image {
   margin-bottom: 20px;
+}
+
+@media only screen and (max-device-width: 500px) {
+  .project__description {
+    margin-bottom: 15px;
+  }
 }
