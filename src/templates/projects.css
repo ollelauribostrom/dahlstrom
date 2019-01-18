@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-device-width: 767px) {
   .projects {
     justify-content: center;
   }
