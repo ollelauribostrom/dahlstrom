@@ -1,9 +1,9 @@
-.project {
+.project__thumbnail {
   position: relative;
   margin: 20px;
 }
 
-.project__thumbnail {
+.project__thumbnail__image {
   width: 260px;
   height: 330px;
   justify-self: center;
@@ -21,7 +21,7 @@
 }
 
 @media only screen and (max-device-width: 1024px) {
-  .project__thumbnail {
+  .project__thumbnail__image {
     width: 200px;
     height: 250px;
     justify-self: center;

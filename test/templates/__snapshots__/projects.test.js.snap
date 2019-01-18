@@ -18,6 +18,7 @@ exports[`Tests for Projects template renders correctly 1`] = `
     }
   }
   path="/test"
+  width={960}
 >
   <SEO
     keywords={
@@ -72,6 +73,7 @@ exports[`Tests for Projects template renders correctly without any projects 1`] 
     }
   }
   path="/test"
+  width={960}
 >
   <SEO
     keywords={

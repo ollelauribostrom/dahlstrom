@@ -18,6 +18,7 @@ exports[`Tests for Project template renders correctly 1`] = `
     }
   }
   path="/test"
+  width={810}
 >
   <SEO
     keywords={

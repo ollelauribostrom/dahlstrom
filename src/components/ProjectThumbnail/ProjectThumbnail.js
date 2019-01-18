@@ -17,8 +17,11 @@ class ProjectThumbnail extends React.Component {
         onMouseOver={() => this.setState({ showTitle: true })}
         onMouseLeave={() => this.setState({ showTitle: false })}
       >
-        <div className="project">
-          <Img fluid={featuredImage.fluid} className="project__thumbnail" />
+        <div className="project__thumbnail">
+          <Img
+            fluid={featuredImage.fluid}
+            className="project__thumbnail__image"
+          />
           {this.state.showTitle ? (
             <span className="project__thumbnail__title">{title}</span>
           ) : null}

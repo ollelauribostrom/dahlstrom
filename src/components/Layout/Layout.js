@@ -4,7 +4,14 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import Header from '../Header';
 
-const Layout = ({ children, path, color, menuBackground, menuColor }) => (
+const Layout = ({
+  children,
+  path,
+  color,
+  menuBackground,
+  menuColor,
+  width,
+}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -24,13 +31,19 @@ const Layout = ({ children, path, color, menuBackground, menuColor }) => (
           menuBackground={menuBackground}
           menuColor={menuColor}
         />
-        <div className="content-wrapper">{children}</div>
+        <div className="content-wrapper" style={{ maxWidth: `${width}px` }}>
+          {children}
+        </div>
       </div>
     )}
   />
 );
 
 Layout.propTypes = {
+  color: PropTypes.shape({ hex: PropTypes.string }),
+  menuColor: PropTypes.shape({ hex: PropTypes.string }),
+  menuBackground: PropTypes.shape({ hex: PropTypes.string }),
+  width: PropTypes.number,
   children: PropTypes.node.isRequired,
 };
 
@@ -38,6 +51,7 @@ Layout.defaultProps = {
   color: { hex: '#000' },
   menuColor: { hex: '#fff' },
   menuBackground: { hex: '#000' },
+  width: 810,
 };
 
 export default Layout;

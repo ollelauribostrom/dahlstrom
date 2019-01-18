@@ -8,12 +8,12 @@ exports[`Tests for ProjectThumbnail renders correctly 1`] = `
   to="/test"
 >
   <div
-    className="project"
+    className="project__thumbnail"
   >
     <Image
       Tag="div"
       alt=""
-      className="project__thumbnail"
+      className="project__thumbnail__image"
       critical={false}
       fadeIn={true}
       fluid={
@@ -37,12 +37,12 @@ exports[`Tests for ProjectThumbnail shows the project title when hovering the th
   to="/test"
 >
   <div
-    className="project"
+    className="project__thumbnail"
   >
     <Image
       Tag="div"
       alt=""
-      className="project__thumbnail"
+      className="project__thumbnail__image"
       critical={false}
       fadeIn={true}
       fluid={

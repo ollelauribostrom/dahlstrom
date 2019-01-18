@@ -10,7 +10,7 @@ import './projects.css';
 export default ({ location, data, pageContext }) => {
   const { seo } = pageContext;
   return (
-    <Layout path={location.pathname}>
+    <Layout path={location.pathname} width={960}>
       <SEO title={seo.title} keywords={seo.keywords} />
       <div className="projects">
         {data.allDatoCmsWork ? (

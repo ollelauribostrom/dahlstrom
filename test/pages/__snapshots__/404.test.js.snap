@@ -17,6 +17,7 @@ exports[`Tests for 404 page renders correctly 1`] = `
       "hex": "#fff",
     }
   }
+  width={810}
 >
   <SEO
     keywords={Array []}
