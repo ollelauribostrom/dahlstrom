@@ -32,7 +32,12 @@ const Sidebar = ({ color, menuColor, menuBackground }) => (
         width={250}
       >
         <div className="sidebar__section">
-          <h3 className="sidebar__section__heading">Work</h3>
+          <h3
+            className="sidebar__section__heading"
+            style={{ color: menuColor.hex }}
+          >
+            Work
+          </h3>
           {data.allDatoCmsCategory.edges.map(edge => (
             <Link
               key={edge.node.slug}
@@ -45,7 +50,12 @@ const Sidebar = ({ color, menuColor, menuBackground }) => (
           ))}
         </div>
         <div className="sidebar__section">
-          <h3 className="sidebar__section__heading">About</h3>
+          <h3
+            className="sidebar__section__heading"
+            style={{ color: menuColor.hex }}
+          >
+            About
+          </h3>
           <Link
             to="/resume"
             style={{ color: menuColor.hex }}
