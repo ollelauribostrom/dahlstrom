@@ -31,7 +31,7 @@ class ProjectThumbnail extends React.Component {
 ProjectThumbnail.propTypes = {
   project: PropTypes.shape({
     slug: PropTypes.string.isRequired,
-    images: PropTypes.array.isRequired,
+    featuredImage: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
   }).isRequired,
 };

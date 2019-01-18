@@ -10,24 +10,14 @@ const mockData = {
         node: {
           title: 'Test project',
           slug: '/test',
-          images: [
-            {
-              fluid: {
-                aspectRatio: 1.4678899082568808,
-                sizes: '(max-width: 1800px) 100vw, 1800px',
-                src: 'someurl1',
-                srcSet: 'someurl1',
-              },
+          featuredImage: {
+            fluid: {
+              aspectRatio: 1.4678899082568808,
+              sizes: '(max-width: 1800px) 100vw, 1800px',
+              src: 'someurl1',
+              srcSet: 'someurl1',
             },
-            {
-              fluid: {
-                aspectRatio: 1.4678899082568808,
-                sizes: '(max-width: 1800px) 100vw, 1800px',
-                src: 'someurl2',
-                srcSet: 'someurl2',
-              },
-            },
-          ],
+          },
         },
       },
     ],

@@ -30,7 +30,9 @@ exports[`Tests for Project template renders correctly 1`] = `
     meta={Array []}
     title="test"
   />
-  <div>
+  <div
+    className="project__info"
+  >
     <h3
       className="project__title"
     >
@@ -38,6 +40,7 @@ exports[`Tests for Project template renders correctly 1`] = `
     </h3>
     <p
       className="project__description"
+      key="desc-line-0"
     >
       test description
     </p>

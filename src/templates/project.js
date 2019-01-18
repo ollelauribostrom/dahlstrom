@@ -14,8 +14,10 @@ export default props => {
       <SEO title={seo.title} keywords={seo.keywords} />
       <div className="project__info">
         <h3 className="project__title">{title}</h3>
-        {description.split('\n').map(line => (
-          <p className="project__description">{line}</p>
+        {description.split('\n').map((line, i) => (
+          <p key={`desc-line-${i}`} className="project__description">
+            {line}
+          </p>
         ))}
       </div>
       {images.map(image => (
