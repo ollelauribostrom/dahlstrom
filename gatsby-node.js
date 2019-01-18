@@ -6,7 +6,7 @@ exports.createPages = ({ graphql, actions }) => {
     graphql(
       `
         {
-          allDatoCmsWork(sort: { fields: [date], order: DESC }) {
+          allDatoCmsWork {
             edges {
               node {
                 title
