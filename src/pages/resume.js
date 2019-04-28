@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -21,7 +22,10 @@ const Resume = props => {
           'residencies',
         ]}
       />
-      <Section title="Education">
+      <Section
+        title="Education"
+        titleColor={props.data.datoCmsSetting.headingColor}
+      >
         {props.data.allDatoCmsEducation.edges.map((edge, i) => (
           <SectionItem
             description={edge.node.description}
@@ -30,7 +34,10 @@ const Resume = props => {
           />
         ))}
       </Section>
-      <Section title="Exhibitions">
+      <Section
+        title="Exhibitions"
+        titleColor={props.data.datoCmsSetting.headingColor}
+      >
         {props.data.allDatoCmsExhibition.edges.map((edge, i) => (
           <SectionItem
             description={edge.node.description}
@@ -39,7 +46,10 @@ const Resume = props => {
           />
         ))}
       </Section>
-      <Section title="Fellowships, Grants, Residencies">
+      <Section
+        title="Fellowships, Grants, Residencies"
+        titleColor={props.data.datoCmsSetting.headingColor}
+      >
         {props.data.allDatoCmsGrant.edges.map((edge, i) => (
           <SectionItem
             description={edge.node.description}
@@ -48,6 +58,15 @@ const Resume = props => {
           />
         ))}
       </Section>
+      <Img
+        fluid={props.data.datoCmsSetting.resumeImage.fluid}
+        style={{
+          width: '150px',
+          height: '150px',
+          float: 'right',
+          marginTop: '-50px',
+        }}
+      />
     </Layout>
   );
 };
@@ -74,6 +93,17 @@ export const query = graphql`
       edges {
         node {
           description
+        }
+      }
+    }
+    datoCmsSetting {
+      headingColor {
+        hex
+      }
+      resumeImage {
+        url
+        fluid(maxWidth: 150, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
         }
       }
     }

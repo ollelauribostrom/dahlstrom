@@ -2,63 +2,62 @@
 
 exports[`Tests for ProjectThumbnail renders correctly 1`] = `
 <mockConstructor
+  className="project__thumbnail"
   key="/test"
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
   to="/test"
 >
-  <div
-    className="project__thumbnail"
-  >
-    <Image
-      Tag="div"
-      alt=""
-      className="project__thumbnail__image"
-      critical={false}
-      fadeIn={true}
-      fluid={
-        Object {
-          "aspectRatio": 1.4678899082568808,
-          "sizes": "(max-width: 1800px) 100vw, 1800px",
-          "src": "someurl",
-          "srcSet": "someurl",
-        }
+  <Image
+    Tag="div"
+    alt=""
+    className="project__thumbnail__image"
+    critical={false}
+    fadeIn={true}
+    fluid={
+      Object {
+        "aspectRatio": 1.4678899082568808,
+        "sizes": "(max-width: 1800px) 100vw, 1800px",
+        "src": "someurl",
+        "srcSet": "someurl",
       }
-    />
-  </div>
+    }
+  />
 </mockConstructor>
 `;
 
 exports[`Tests for ProjectThumbnail shows the project title when hovering the thumbnail 1`] = `
 <mockConstructor
+  className="project__thumbnail"
   key="/test"
   onMouseLeave={[Function]}
   onMouseOver={[Function]}
   to="/test"
 >
-  <div
-    className="project__thumbnail"
-  >
-    <Image
-      Tag="div"
-      alt=""
-      className="project__thumbnail__image"
-      critical={false}
-      fadeIn={true}
-      fluid={
-        Object {
-          "aspectRatio": 1.4678899082568808,
-          "sizes": "(max-width: 1800px) 100vw, 1800px",
-          "src": "someurl",
-          "srcSet": "someurl",
-        }
+  <Image
+    Tag="div"
+    alt=""
+    className="project__thumbnail__image"
+    critical={false}
+    fadeIn={true}
+    fluid={
+      Object {
+        "aspectRatio": 1.4678899082568808,
+        "sizes": "(max-width: 1800px) 100vw, 1800px",
+        "src": "someurl",
+        "srcSet": "someurl",
       }
-    />
-    <span
-      className="project__thumbnail__title"
-    >
-      Test
-    </span>
-  </div>
+    }
+  />
+  <span
+    className="project__thumbnail__title"
+    style={
+      Object {
+        "backgroundColor": "#000",
+      }
+    }
+  >
+    Test
+  </span>
 </mockConstructor>
 `;

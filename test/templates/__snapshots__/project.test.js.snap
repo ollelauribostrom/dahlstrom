@@ -46,6 +46,16 @@ exports[`Tests for Project template renders correctly 1`] = `
       test description
     </p>
   </div>
+  <Video
+    key="video-0"
+    src="videosrc"
+  />
+  <Video
+    key="video-1"
+  />
+  <Video
+    key="video-2"
+  />
   <Image
     Tag="div"
     alt=""

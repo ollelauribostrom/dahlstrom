@@ -12,20 +12,24 @@ class ProjectThumbnail extends React.Component {
     const { slug, featuredImage, title } = this.props.project;
     return (
       <Link
+        className="project__thumbnail"
         to={slug}
         key={slug}
         onMouseOver={() => this.setState({ showTitle: true })}
         onMouseLeave={() => this.setState({ showTitle: false })}
       >
-        <div className="project__thumbnail">
-          <Img
-            fluid={featuredImage.fluid}
-            className="project__thumbnail__image"
-          />
-          {this.state.showTitle ? (
-            <span className="project__thumbnail__title">{title}</span>
-          ) : null}
-        </div>
+        <Img
+          fluid={featuredImage.fluid}
+          className="project__thumbnail__image"
+        />
+        {this.state.showTitle ? (
+          <span
+            className="project__thumbnail__title"
+            style={{ backgroundColor: this.props.hoverColor.hex }}
+          >
+            {title}
+          </span>
+        ) : null}
       </Link>
     );
   }
@@ -37,6 +41,7 @@ ProjectThumbnail.propTypes = {
     featuredImage: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
   }).isRequired,
+  hoverColor: PropTypes.shape({ hex: PropTypes.string }),
 };
 
 export default ProjectThumbnail;

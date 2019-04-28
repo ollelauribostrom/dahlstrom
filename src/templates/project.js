@@ -4,11 +4,19 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Video from '../components/Video';
 import './project.css';
 
 export default props => {
   const { seo } = props.pageContext;
-  const { title, description, images } = props.data.datoCmsWork;
+  const {
+    title,
+    description,
+    images,
+    video1,
+    video2,
+    video3,
+  } = props.data.datoCmsWork;
   return (
     <Layout path={props.location.pathname}>
       <SEO title={seo.title} keywords={seo.keywords} />
@@ -20,6 +28,9 @@ export default props => {
           </p>
         ))}
       </div>
+      {[video1, video2, video3].map((src, i) => (
+        <Video key={`video-${i}`} src={src} />
+      ))}
       {images.map(image => (
         <Img
           key={image.fluid.src}
@@ -36,9 +47,12 @@ export const query = graphql`
     datoCmsWork(slug: { eq: $slug }) {
       title
       description
+      video1
+      video2
+      video3
       images {
         url
-        fluid(maxWidth: 960, imgixParams: { fm: "jpg", auto: "compress" }) {
+        fluid(maxWidth: 810, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }

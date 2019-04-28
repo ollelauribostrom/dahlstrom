@@ -7,6 +7,7 @@ describe('Tests for ProjectThumbnail', () => {
   it('renders correctly', () => {
     const wrapper = shallow(
       <ProjectThumbnail
+        hoverColor={{ hex: '#000' }}
         project={{
           slug: '/test',
           title: 'Test',
@@ -26,6 +27,7 @@ describe('Tests for ProjectThumbnail', () => {
   it('shows the project title when hovering the thumbnail', () => {
     const wrapper = shallow(
       <ProjectThumbnail
+        hoverColor={{ hex: '#000' }}
         project={{
           slug: '/test',
           title: 'Test',

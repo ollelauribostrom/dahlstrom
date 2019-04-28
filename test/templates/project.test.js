@@ -13,6 +13,7 @@ describe('Tests for Project template', () => {
           datoCmsWork: {
             title: 'Test project',
             description: 'test description',
+            video1: 'videosrc',
             images: [
               {
                 fluid: {

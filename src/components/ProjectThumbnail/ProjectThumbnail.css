@@ -1,11 +1,11 @@
 .project__thumbnail {
   position: relative;
-  margin: 20px;
+  margin: 25px;
 }
 
 .project__thumbnail__image {
-  width: 260px;
-  height: 330px;
+  width: 300px;
+  height: 400px;
   justify-self: center;
 }
 
@@ -13,17 +13,24 @@
   position: absolute;
   bottom: 0px;
   left: 0px;
+  height: 100%;
   width: 100%;
   text-align: center;
   padding: 10px 0;
-  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (max-device-width: 1024px) {
+  .project__thumbnail {
+    margin: 15px 0;
+    width: 100%;
+  }
   .project__thumbnail__image {
-    width: 200px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     justify-self: center;
   }
 }

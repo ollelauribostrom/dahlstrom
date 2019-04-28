@@ -2,36 +2,28 @@
 
 exports[`Tests for MenuItem renders correctly 1`] = `
 <span
-  onMouseOver={[Function]}
-  style={
-    Object {
-      "borderBottom": "none",
-      "color": "#fff",
-      "cursor": "pointer",
-    }
-  }
+  className="menu-item "
   tabIndex={0}
 >
-  <span>
-    child
-  </span>
+  <mockConstructor
+    className="menu-item__link"
+    to="/test"
+  >
+    Test
+  </mockConstructor>
 </span>
 `;
 
 exports[`Tests for MenuItem renders correctly when active 1`] = `
 <span
-  onMouseOver={[Function]}
-  style={
-    Object {
-      "borderBottom": "1px solid #000",
-      "color": "#000",
-      "cursor": "pointer",
-    }
-  }
+  className="menu-item menu-item--active"
   tabIndex={0}
 >
-  <span>
-    child
-  </span>
+  <mockConstructor
+    className="menu-item__link"
+    to="/test"
+  >
+    Test
+  </mockConstructor>
 </span>
 `;
