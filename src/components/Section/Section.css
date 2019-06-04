@@ -3,10 +3,20 @@
 }
 
 .section__heading {
-  margin-bottom: 10px;
-  color: #6e297a;
-  font-size: 16px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  font-size: 85px;
   font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  background-color: #fff1d9;
+}
+
+.section:nth-child(odd) .section__heading {
+  background-color: #dedeff;
+}
+
+.section:last-child .section__heading {
+  margin-right: 20px;
 }
 
 @media only screen and (max-device-width: 500px) {

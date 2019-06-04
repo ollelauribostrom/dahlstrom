@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Section = props => (
   <div className="section">
-    <h3 className="section__heading" style={{ color: props.titleColor.hex }}>
+    <h3 className="section__heading">
       {props.title}
     </h3>
     {props.children}
@@ -12,7 +12,7 @@ const Section = props => (
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
-  titleColor: PropTypes.shape({ hex: PropTypes.string }),
+  titleColor: PropTypes.shape ({hex: PropTypes.string}),
   children: PropTypes.node.isRequired,
 };
 

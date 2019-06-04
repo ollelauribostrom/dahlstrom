@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
@@ -9,24 +9,16 @@ import SectionItem from '../components/SectionItem';
 
 const Resume = props => {
   return (
-    <Layout path={props.location.pathname}>
+    <Layout path={props.location.pathname} display="flex">
       <SEO
         title="Resume"
-        keywords={[
-          `resume`,
-          `cv`,
-          'education',
-          'exhibitions',
-          'fellowships',
-          'grants',
-          'residencies',
-        ]}
+        keywords={[`resume`, `cv`, 'education', 'exhibitions', 'grants']}
       />
       <Section
         title="Education"
         titleColor={props.data.datoCmsSetting.headingColor}
       >
-        {props.data.allDatoCmsEducation.edges.map((edge, i) => (
+        {props.data.allDatoCmsEducation.edges.map ((edge, i) => (
           <SectionItem
             description={edge.node.description}
             href={edge.node.href}
@@ -38,7 +30,7 @@ const Resume = props => {
         title="Exhibitions"
         titleColor={props.data.datoCmsSetting.headingColor}
       >
-        {props.data.allDatoCmsExhibition.edges.map((edge, i) => (
+        {props.data.allDatoCmsExhibition.edges.map ((edge, i) => (
           <SectionItem
             description={edge.node.description}
             href={edge.node.href}
@@ -47,10 +39,10 @@ const Resume = props => {
         ))}
       </Section>
       <Section
-        title="Fellowships, Grants, Residencies"
+        title="Grants"
         titleColor={props.data.datoCmsSetting.headingColor}
       >
-        {props.data.allDatoCmsGrant.edges.map((edge, i) => (
+        {props.data.allDatoCmsGrant.edges.map ((edge, i) => (
           <SectionItem
             description={edge.node.description}
             href={edge.node.href}
@@ -58,15 +50,6 @@ const Resume = props => {
           />
         ))}
       </Section>
-      <Img
-        fluid={props.data.datoCmsSetting.resumeImage.fluid}
-        style={{
-          width: '150px',
-          height: '150px',
-          float: 'right',
-          marginTop: '-50px',
-        }}
-      />
     </Layout>
   );
 };

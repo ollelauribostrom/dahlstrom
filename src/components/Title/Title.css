@@ -1,0 +1,21 @@
+.title {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.title__word {
+  display: block;
+}
+
+.title--small {
+  font-size: 45px;
+}
+
+.title--large {
+  font-size: 7vw;
+}
+
+.title__link {
+  color: blue;
+  text-decoration: none;
+}

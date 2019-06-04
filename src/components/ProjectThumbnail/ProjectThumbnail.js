@@ -1,39 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-class ProjectThumbnail extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { showTitle: false };
-  }
-  render() {
-    const { slug, featuredImage, title } = this.props.project;
-    return (
-      <Link
-        className="project__thumbnail"
-        to={slug}
-        key={slug}
-        onMouseOver={() => this.setState({ showTitle: true })}
-        onMouseLeave={() => this.setState({ showTitle: false })}
-      >
-        <Img
-          fluid={featuredImage.fluid}
-          className="project__thumbnail__image"
-        />
-        {this.state.showTitle ? (
-          <span
-            className="project__thumbnail__title"
-            style={{ backgroundColor: this.props.hoverColor.hex }}
-          >
-            {title}
-          </span>
-        ) : null}
-      </Link>
-    );
-  }
-}
+const ProjectThumbnail = ({ project, hoverColor }) => {
+  const [showTitle, setShowTitle] = useState(false);
+  const { slug, featuredImage, title } = project;
+  return (
+    <Link
+      className="project__thumbnail"
+      to={slug}
+      key={slug}
+      onMouseOver={() => setShowTitle(true)}
+      onMouseLeave={() => setShowTitle(false)}
+    >
+      <Img fluid={featuredImage.fluid} className="project__thumbnail__image" />
+      {showTitle ? (
+        <span
+          className="project__thumbnail__title"
+          style={{ backgroundColor: hoverColor.hex }}
+        >
+          {title}
+        </span>
+      ) : null}
+    </Link>
+  );
+};
 
 ProjectThumbnail.propTypes = {
   project: PropTypes.shape({

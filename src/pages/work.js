@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import ProjectThumbnail from '../components/ProjectThumbnail';
 import './index.css';
-import ImageBackground from '../components/ImageBackground';
 
 export default ({ data, location }) => {
   return (
@@ -14,11 +14,18 @@ export default ({ data, location }) => {
       menuColor={{ hex: '#151515' }}
       width={1200}
     >
-      <SEO
-        title="Felix Dahlström Persson"
-        keywords={['Felix Dahlström Persson', 'Portfolio']}
-      />
-      <ImageBackground />
+      <SEO title="Work" keywords={['Felix Dahlström Persson', 'Portfolio']} />
+      <div className="projects">
+        {data.allDatoCmsWork
+          ? data.allDatoCmsWork.edges.map(edge => (
+              <ProjectThumbnail
+                project={edge.node}
+                key={edge.node.slug}
+                hoverColor={data.datoCmsSetting.hoverColor}
+              />
+            ))
+          : null}
+      </div>
     </Layout>
   );
 };
