@@ -6,50 +6,59 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Section from '../components/Section';
 import SectionItem from '../components/SectionItem';
+import './resume.css';
 
 const Resume = props => {
   return (
-    <Layout path={props.location.pathname} display="flex">
+    <Layout path={props.location.pathname}>
       <SEO
         title="Resume"
         keywords={[`resume`, `cv`, 'education', 'exhibitions', 'grants']}
       />
-      <Section
-        title="Education"
-        titleColor={props.data.datoCmsSetting.headingColor}
-      >
-        {props.data.allDatoCmsEducation.edges.map ((edge, i) => (
-          <SectionItem
-            description={edge.node.description}
-            href={edge.node.href}
-            key={`education-${i}`}
-          />
-        ))}
-      </Section>
-      <Section
-        title="Exhibitions"
-        titleColor={props.data.datoCmsSetting.headingColor}
-      >
-        {props.data.allDatoCmsExhibition.edges.map ((edge, i) => (
-          <SectionItem
-            description={edge.node.description}
-            href={edge.node.href}
-            key={`exhibition-${i}`}
-          />
-        ))}
-      </Section>
-      <Section
-        title="Grants"
-        titleColor={props.data.datoCmsSetting.headingColor}
-      >
-        {props.data.allDatoCmsGrant.edges.map ((edge, i) => (
-          <SectionItem
-            description={edge.node.description}
-            href={edge.node.href}
-            key={`grant-${i}`}
-          />
-        ))}
-      </Section>
+      <div className="resume">
+        <Section
+          title="Education"
+          titleColor={props.data.datoCmsSetting.headingColor}
+        >
+          <div className="section-item__wrapper">
+            {props.data.allDatoCmsEducation.edges.map ((edge, i) => (
+              <SectionItem
+                description={edge.node.description}
+                href={edge.node.href}
+                key={`education-${i}`}
+              />
+            ))}
+          </div>
+        </Section>
+        <Section
+          title="Exhibitions"
+          titleColor={props.data.datoCmsSetting.headingColor}
+        >
+          <div className="section-item__wrapper">
+            {props.data.allDatoCmsExhibition.edges.map ((edge, i) => (
+              <SectionItem
+                description={edge.node.description}
+                href={edge.node.href}
+                key={`exhibition-${i}`}
+              />
+            ))}
+          </div>
+        </Section>
+        <Section
+          title="Grants"
+          titleColor={props.data.datoCmsSetting.headingColor}
+        >
+          <div className="section-item__wrapper">
+            {props.data.allDatoCmsGrant.edges.map ((edge, i) => (
+              <SectionItem
+                description={edge.node.description}
+                href={edge.node.href}
+                key={`grant-${i}`}
+              />
+            ))}
+          </div>
+        </Section>
+      </div>
     </Layout>
   );
 };

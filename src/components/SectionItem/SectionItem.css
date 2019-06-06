@@ -1,6 +1,7 @@
 .section-item {
   display: block;
   font-size: 12px;
+  font-weight: 600;
 }
 
 .section-item--link {

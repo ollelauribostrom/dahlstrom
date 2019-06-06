@@ -1,17 +1,16 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import './index.css';
 import ImageBackground from '../components/ImageBackground';
 
-export default ({ data, location }) => {
+export default ({data, location}) => {
   return (
     <Layout
       path={location.pathname}
-      color={{ hex: '#151515' }}
-      menuColor={{ hex: '#151515' }}
+      color={{hex: '#151515'}}
+      menuColor={{hex: '#151515'}}
       width={1200}
     >
       <SEO

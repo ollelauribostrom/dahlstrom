@@ -1,23 +1,22 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ProjectThumbnail from '../components/ProjectThumbnail';
-import './index.css';
+import './work.css';
 
-export default ({ data, location }) => {
+export default ({data, location}) => {
   return (
     <Layout
       path={location.pathname}
-      color={{ hex: '#151515' }}
-      menuColor={{ hex: '#151515' }}
-      width={1200}
+      color={{hex: '#151515'}}
+      menuColor={{hex: '#151515'}}
     >
       <SEO title="Work" keywords={['Felix Dahlström Persson', 'Portfolio']} />
       <div className="projects">
         {data.allDatoCmsWork
-          ? data.allDatoCmsWork.edges.map(edge => (
+          ? data.allDatoCmsWork.edges.map (edge => (
               <ProjectThumbnail
                 project={edge.node}
                 key={edge.node.slug}
@@ -41,7 +40,7 @@ export const query = graphql`
             url
             fluid(
               maxHeight: 400
-              maxWidth: 300
+              maxWidth: 400
               imgixParams: { fm: "jpg", auto: "compress" }
             ) {
               ...GatsbyDatoCmsSizes

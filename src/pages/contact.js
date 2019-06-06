@@ -6,17 +6,14 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Section from '../components/Section';
 import SectionItem from '../components/SectionItem';
+import './contact.css';
 
 const Contact = ({location, data}) => (
-  <Layout path={location.pathname}>
+  <Layout path={location.pathname} width={800}>
     <SEO title="Contact" keywords={[`contact`]} />
-    <div
-      style={{
-        display: 'flex',
-      }}
-    >
+    <div className="contact">
       <div>
-        <h2 style={{fontSize: '12vw'}}>dahlstrom.persson@gmail.com</h2>
+        <h2 className="contact__email">dahlstrom.persson@gmail.com</h2>
       </div>
     </div>
   </Layout>

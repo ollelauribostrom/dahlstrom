@@ -1,0 +1,21 @@
+.resume {
+  padding: 0px 1.0875rem 1.45rem;
+}
+
+.resume .section {
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.resume .section__heading {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  align-self: flex-start;
+}
+
+.resume .section__heading:nth-of-type(even) {
+}
+
+.resume .section__heading:nth-of-type(odd) {
+}

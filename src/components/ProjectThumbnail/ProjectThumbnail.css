@@ -1,10 +1,10 @@
 .project__thumbnail {
   position: relative;
-  margin: 25px;
+  margin: 20px;
 }
 
 .project__thumbnail__image {
-  width: 300px;
+  width: 280px;
   height: 400px;
   justify-self: center;
 }
