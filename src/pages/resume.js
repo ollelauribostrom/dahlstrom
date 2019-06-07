@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import Section from '../components/Section';
 import SectionItem from '../components/SectionItem';
 import './resume.css';
+import Creators from '../components/Creators';
 
 const Resume = props => {
   return (
@@ -59,6 +60,7 @@ const Resume = props => {
           </div>
         </Section>
       </div>
+      <Creators />
     </Layout>
   );
 };

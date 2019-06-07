@@ -9,3 +9,9 @@
 .menu-item__link {
   text-decoration: none;
 }
+
+@media only screen and (min-device-width: 2000px) {
+  .menu-item__link {
+    font-size: 50px;
+  }
+}

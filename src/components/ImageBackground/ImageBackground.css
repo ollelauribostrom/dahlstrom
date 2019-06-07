@@ -13,3 +13,9 @@
 .image-background__img {
   height: 80vh;
 }
+
+@media only screen and (max-device-width: 1024px) {
+  .image-background__img {
+    height: 60vh;
+  }
+}

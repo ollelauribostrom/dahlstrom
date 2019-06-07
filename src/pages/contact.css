@@ -9,3 +9,9 @@
   font-size: 12vw;
   font-family: 'Raleway', sans-serif;
 }
+
+@media only screen and (max-device-width: 1024px) {
+  .contact__email {
+    font-size: 20vh;
+  }
+}

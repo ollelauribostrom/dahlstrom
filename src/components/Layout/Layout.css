@@ -626,7 +626,7 @@ pre tt:after {
 }
 
 #outer-container {
-  padding: 50px;
+  padding: 6.25vh 3.9vw;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -643,6 +643,9 @@ pre tt:after {
 }
 
 @media only screen and (max-device-width: 500px) {
+  #outer-container {
+    padding: 50px;
+  }
   .content-wrapper {
     padding: 0;
   }

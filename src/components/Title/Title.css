@@ -8,7 +8,7 @@
 }
 
 .title--small {
-  font-size: 45px;
+  font-size: 3.5vw;
 }
 
 .title--large {
@@ -18,4 +18,14 @@
 .title__link {
   color: #ff5722;
   text-decoration: none;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .title--small {
+    font-size: 4vh;
+  }
+
+  .title--large {
+    font-size: 7vh;
+  }
 }

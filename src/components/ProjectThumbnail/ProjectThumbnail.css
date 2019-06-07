@@ -4,8 +4,7 @@
 }
 
 .project__thumbnail__image {
-  width: 280px;
-  height: 400px;
+  width: 25vw;
   justify-self: center;
 }
 
