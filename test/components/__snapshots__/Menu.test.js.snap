@@ -1,7 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tests for Menu renders correctly 1`] = `
-<mockConstructor
-  render={[Function]}
-/>
+<div
+  className="menu"
+>
+  <MenuItem
+    isActive={false}
+    title="Work"
+    url="/"
+  />
+  <MenuItem
+    isActive={false}
+    title="Resume"
+    url="/resume"
+  />
+  <MenuItem
+    isActive={false}
+    title="Contact"
+    url="/contact"
+  />
+</div>
 `;

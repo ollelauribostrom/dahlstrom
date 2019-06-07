@@ -1,0 +1,13 @@
+.menu-item {
+  color: #151515;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.menu-item--active {
+  border-bottom: 1px solid #151515;
+}
+
+.menu-item__link {
+  color: #151515;
+}

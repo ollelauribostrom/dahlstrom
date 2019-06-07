@@ -6,6 +6,11 @@ exports[`Tests for Section renders correctly for a multiple children 1`] = `
 >
   <h3
     className="section__heading"
+    style={
+      Object {
+        "color": "#000",
+      }
+    }
   >
     test
   </h3>
@@ -24,6 +29,11 @@ exports[`Tests for Section renders correctly for a single child 1`] = `
 >
   <h3
     className="section__heading"
+    style={
+      Object {
+        "color": "#000",
+      }
+    }
   >
     test
   </h3>

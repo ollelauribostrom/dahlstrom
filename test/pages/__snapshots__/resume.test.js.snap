@@ -38,6 +38,11 @@ exports[`Tests for Resume page renders correctly 1`] = `
   />
   <Section
     title="Education"
+    titleColor={
+      Object {
+        "hex": "#000",
+      }
+    }
   >
     <SectionItem
       description="Education 1"
@@ -50,6 +55,11 @@ exports[`Tests for Resume page renders correctly 1`] = `
   </Section>
   <Section
     title="Exhibitions"
+    titleColor={
+      Object {
+        "hex": "#000",
+      }
+    }
   >
     <SectionItem
       description="Exhibition1"
@@ -63,6 +73,11 @@ exports[`Tests for Resume page renders correctly 1`] = `
   </Section>
   <Section
     title="Fellowships, Grants, Residencies"
+    titleColor={
+      Object {
+        "hex": "#000",
+      }
+    }
   >
     <SectionItem
       description="Grant1"
@@ -74,5 +89,27 @@ exports[`Tests for Resume page renders correctly 1`] = `
       key="grant-1"
     />
   </Section>
+  <Image
+    Tag="div"
+    alt=""
+    critical={false}
+    fadeIn={true}
+    fluid={
+      Object {
+        "aspectRatio": 1.4678899082568808,
+        "sizes": "(max-width: 1800px) 100vw, 1800px",
+        "src": "someurl",
+        "srcSet": "someurl",
+      }
+    }
+    style={
+      Object {
+        "float": "right",
+        "height": "150px",
+        "marginTop": "-50px",
+        "width": "150px",
+      }
+    }
+  />
 </Layout>
 `;

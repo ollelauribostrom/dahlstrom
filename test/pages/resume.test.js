@@ -22,6 +22,20 @@ const mockData = {
       { node: { description: 'Education 2' } },
     ],
   },
+  datoCmsSetting: {
+    headingColor: {
+      hex: '#000',
+    },
+    resumeImage: {
+      url: 'some-url',
+      fluid: {
+        aspectRatio: 1.4678899082568808,
+        sizes: '(max-width: 1800px) 100vw, 1800px',
+        src: 'someurl',
+        srcSet: 'someurl',
+      },
+    },
+  },
 };
 
 describe('Tests for Resume page', () => {

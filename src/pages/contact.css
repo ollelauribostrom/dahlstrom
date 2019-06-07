@@ -1,0 +1,17 @@
+.contact {
+  display: flex;
+  max-width: 810px;
+  margin: 0 auto;
+  padding: 0px 1.0875rem 1.45rem;
+}
+
+.contact__email {
+  font-size: 12vw;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .contact__email {
+    font-size: 20vh;
+  }
+}

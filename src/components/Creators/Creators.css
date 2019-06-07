@@ -1,0 +1,50 @@
+.creators {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  margin-right: 5vw;
+}
+
+.creator__image {
+  width: 20vh;
+}
+
+.creator:hover {
+  transform: scale(1.5);
+}
+
+.creator__title {
+  display: none;
+  background-color: #ff5722;
+  position: absolute;
+  padding: 5px;
+  top: 30%;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.creator:hover .creator__title {
+  display: block;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .creators {
+    background-color: #fff;
+    width: 100%;
+    padding-bottom: 1px;
+  }
+  .creator__image {
+    width: 15vh;
+  }
+}

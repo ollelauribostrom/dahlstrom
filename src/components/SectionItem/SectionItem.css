@@ -1,7 +1,7 @@
 .section-item {
   display: block;
-  margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .section-item--link {

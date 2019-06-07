@@ -1,17 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
+import {StaticQuery, graphql} from 'gatsby';
 
 import Header from '../Header';
 
-const Layout = ({
-  children,
-  path,
-  color,
-  menuBackground,
-  menuColor,
-  width,
-}) => (
+const Layout = ({children, path, color, menuBackground, menuColor, width}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -31,27 +24,24 @@ const Layout = ({
           menuBackground={menuBackground}
           menuColor={menuColor}
         />
-        <div className="content-wrapper" style={{ maxWidth: `${width}px` }}>
-          {children}
-        </div>
+        {children}
       </div>
     )}
   />
 );
 
 Layout.propTypes = {
-  color: PropTypes.shape({ hex: PropTypes.string }),
-  menuColor: PropTypes.shape({ hex: PropTypes.string }),
-  menuBackground: PropTypes.shape({ hex: PropTypes.string }),
+  color: PropTypes.shape ({hex: PropTypes.string}),
+  menuColor: PropTypes.shape ({hex: PropTypes.string}),
+  menuBackground: PropTypes.shape ({hex: PropTypes.string}),
   width: PropTypes.number,
   children: PropTypes.node.isRequired,
 };
 
 Layout.defaultProps = {
-  color: { hex: '#000' },
-  menuColor: { hex: '#fff' },
-  menuBackground: { hex: '#000' },
-  width: 810,
+  color: {hex: '#000'},
+  menuColor: {hex: '#fff'},
+  menuBackground: {hex: '#000'},
 };
 
 export default Layout;

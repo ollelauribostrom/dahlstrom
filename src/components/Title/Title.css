@@ -1,0 +1,31 @@
+.title {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.title__word {
+  display: block;
+}
+
+.title--small {
+  font-size: 3.5vw;
+}
+
+.title--large {
+  font-size: 7vw;
+}
+
+.title__link {
+  color: #ff5722;
+  text-decoration: none;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .title--small {
+    font-size: 4vh;
+  }
+
+  .title--large {
+    font-size: 7vh;
+  }
+}

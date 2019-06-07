@@ -3,7 +3,8 @@ import {graphql} from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import ImageBackground from '../components/ImageBackground';
+import ProjectThumbnail from '../components/ProjectThumbnail';
+import './work.css';
 
 export default ({data, location}) => {
   return (
@@ -11,13 +12,19 @@ export default ({data, location}) => {
       path={location.pathname}
       color={{hex: '#151515'}}
       menuColor={{hex: '#151515'}}
-      width={1200}
     >
-      <SEO
-        title="Felix Dahlström Persson"
-        keywords={['Felix Dahlström Persson', 'Portfolio']}
-      />
-      <ImageBackground />
+      <SEO title="Work" keywords={['Felix Dahlström Persson', 'Portfolio']} />
+      <div className="projects">
+        {data.allDatoCmsWork
+          ? data.allDatoCmsWork.edges.map (edge => (
+              <ProjectThumbnail
+                project={edge.node}
+                key={edge.node.slug}
+                hoverColor={data.datoCmsSetting.hoverColor}
+              />
+            ))
+          : null}
+      </div>
     </Layout>
   );
 };
@@ -33,7 +40,7 @@ export const query = graphql`
             url
             fluid(
               maxHeight: 400
-              maxWidth: 300
+              maxWidth: 400
               imgixParams: { fm: "jpg", auto: "compress" }
             ) {
               ...GatsbyDatoCmsSizes

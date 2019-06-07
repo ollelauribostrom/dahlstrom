@@ -4,21 +4,21 @@ exports[`Tests for Index page renders correctly 1`] = `
 <Layout
   color={
     Object {
-      "hex": "#fff",
+      "hex": "#151515",
     }
   }
   menuBackground={
     Object {
-      "hex": "#fff",
+      "hex": "#000",
     }
   }
   menuColor={
     Object {
-      "hex": "#000",
+      "hex": "#151515",
     }
   }
   path="/test"
-  width={810}
+  width={1200}
 >
   <SEO
     keywords={
@@ -29,10 +29,10 @@ exports[`Tests for Index page renders correctly 1`] = `
     }
     lang="en"
     meta={Array []}
-    title="Home"
+    title="Work"
   />
-  <ImageBackground
-    src="img"
+  <div
+    className="projects"
   />
 </Layout>
 `;

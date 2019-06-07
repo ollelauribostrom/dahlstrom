@@ -31,60 +31,88 @@ exports[`Tests for Contact page renders correctly 1`] = `
     title="Contact"
   />
   <div
-    style={Object {}}
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-evenly",
+      }
+    }
   >
-    <h3
-      style={
+    <Image
+      Tag="div"
+      alt=""
+      critical={false}
+      fadeIn={true}
+      fluid={
         Object {
-          "color": "#6e297a",
-          "fontFamily": "'Roboto', sans-serif",
-          "fontSize": "16px",
-          "marginBottom": "10px",
+          "aspectRatio": 1.4678899082568808,
+          "sizes": "(max-width: 1800px) 100vw, 1800px",
+          "src": "someurl",
+          "srcSet": "someurl",
         }
       }
-    >
-      Contact
-    </h3>
-    <span
       style={
         Object {
-          "display": "block",
-          "fontSize": "14px",
+          "height": "410px",
+          "width": "320px",
         }
       }
-    >
-      Felix Dahlström Persson
-    </span>
-    <span
-      style={
-        Object {
-          "display": "block",
-          "fontSize": "14px",
+    />
+    <div>
+      <h3
+        style={
+          Object {
+            "color": "#000",
+            "fontFamily": "'Roboto', sans-serif",
+            "fontSize": "16px",
+            "marginBottom": "10px",
+          }
         }
-      }
-    >
-      Thorvald Meyers Gate 71A
-    </span>
-    <span
-      style={
-        Object {
-          "display": "block",
-          "fontSize": "14px",
+      >
+        Contact
+      </h3>
+      <span
+        style={
+          Object {
+            "display": "block",
+            "fontSize": "14px",
+          }
         }
-      }
-    >
-      0552 Oslo, Norway
-    </span>
-    <span
-      style={
-        Object {
-          "display": "block",
-          "fontSize": "14px",
+      >
+        Felix Dahlström Persson
+      </span>
+      <span
+        style={
+          Object {
+            "display": "block",
+            "fontSize": "14px",
+          }
         }
-      }
-    >
-      dahlstrom.persson@gmail.com
-    </span>
+      >
+        Thorvald Meyers Gate 71A
+      </span>
+      <span
+        style={
+          Object {
+            "display": "block",
+            "fontSize": "14px",
+          }
+        }
+      >
+        0552 Oslo, Norway
+      </span>
+      <span
+        style={
+          Object {
+            "display": "block",
+            "fontSize": "14px",
+          }
+        }
+      >
+        dahlstrom.persson@gmail.com
+      </span>
+    </div>
   </div>
 </Layout>
 `;

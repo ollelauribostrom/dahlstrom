@@ -1,29 +1,25 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Link } from 'gatsby';
 
-const MenuItem = props => (
+const MenuItem = ({ title, url, isActive }) => (
   <span
     tabIndex={0}
-    style={{
-      color: props.color.hex,
-      cursor: 'pointer',
-      borderBottom: props.isActive ? `1px solid ${props.color.hex}` : 'none',
-    }}
-    onMouseOver={props.onMouseOver}
+    className={`menu-item ${isActive ? 'menu-item--active' : ''}`}
   >
-    {props.children}
+    <Link to={url} className="menu-item__link">
+      {title}
+    </Link>
   </span>
 );
 
 MenuItem.propTypes = {
-  color: PropTypes.shape({ hex: PropTypes.string }),
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
   isActive: PropTypes.bool,
-  children: PropTypes.node.isRequired,
-  onMouseOver: PropTypes.func.isRequired,
 };
 
 MenuItem.defaultProps = {
-  color: { hex: '#000' },
   isActive: false,
 };
 

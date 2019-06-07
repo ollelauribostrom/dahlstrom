@@ -6,7 +6,7 @@ import Section from '../../src/components/Section';
 describe('Tests for Section', () => {
   it('renders correctly for a single child', () => {
     const wrapper = shallow(
-      <Section title="test">
+      <Section title="test" titleColor={{ hex: '#000' }}>
         <span>child</span>
       </Section>
     );
@@ -14,7 +14,7 @@ describe('Tests for Section', () => {
   });
   it('renders correctly for a multiple children', () => {
     const wrapper = shallow(
-      <Section title="test">
+      <Section title="test" titleColor={{ hex: '#000' }}>
         <span>child</span>
         <span>child</span>
       </Section>

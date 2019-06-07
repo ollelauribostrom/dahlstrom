@@ -1,0 +1,21 @@
+.resume {
+  padding: 0px 1.0875rem 1.45rem;
+}
+
+.resume .section {
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.resume .section__heading {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  align-self: flex-start;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .resume {
+    padding-bottom: 25vh;
+  }
+}
